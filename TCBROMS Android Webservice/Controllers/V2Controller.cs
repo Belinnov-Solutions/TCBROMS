@@ -26,6 +26,7 @@ using ZXing;
 namespace TCBROMS_Android_Webservice.Controllers
 {
     //[AllowCrossSite]
+    // Test commit
     public class V2Controller : Controller
     {
         ChineseTillEntities1 dbContext = new ChineseTillEntities1();
