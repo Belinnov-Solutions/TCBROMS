@@ -1,0 +1,71 @@
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\roslyn\csc.exe
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\roslyn\System.Collections.Immutable.dll
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\roslyn\System.Reflection.Metadata.dll
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\roslyn\vbc.exe
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\roslyn\VBCSCompiler.exe
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\roslyn\VBCSCompiler.exe.config
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\TCBROMS Android Webservice.dll.config
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\TCBROMS Android Webservice.dll
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\TCBROMS Android Webservice.pdb
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\Entity.dll
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\NLog.dll
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Buffers.dll
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Memory.dll
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Numerics.Vectors.dll
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Text.Encodings.Web.dll
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\Entity.pdb
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\Entity.dll.config
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\NLog.xml
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Buffers.xml
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Memory.xml
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Numerics.Vectors.xml
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Text.Encodings.Web.xml
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\obj\Debug\TCBROMS Android Webservice.csproj.AssemblyReference.cache
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\obj\Debug\TCBROMS Android Webservice.csproj.CoreCompileInputs.cache
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\obj\Debug\TCBROMS .4EAA7A9C.Up2Date
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\obj\Debug\TCBROMS Android Webservice.dll
+D:\Development\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\obj\Debug\TCBROMS Android Webservice.pdb
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\roslyn\csc.exe
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\roslyn\System.Collections.Immutable.dll
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\roslyn\System.Reflection.Metadata.dll
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\roslyn\vbc.exe
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\roslyn\VBCSCompiler.exe
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\roslyn\VBCSCompiler.exe.config
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\TCBROMS Android Webservice.dll.config
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\TCBROMS Android Webservice.dll
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\TCBROMS Android Webservice.pdb
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\Entity.dll
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\NLog.dll
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Buffers.dll
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Memory.dll
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Numerics.Vectors.dll
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Text.Encodings.Web.dll
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\Elmah.dll
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\Entity.pdb
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\Entity.dll.config
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\NLog.xml
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Buffers.xml
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Memory.xml
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Numerics.Vectors.xml
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Text.Encodings.Web.xml
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\obj\Debug\TCBROMS Android Webservice.csproj.AssemblyReference.cache
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\obj\Debug\TCBROMS Android Webservice.csproj.CoreCompileInputs.cache
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\obj\Debug\TCBROMS .4EAA7A9C.Up2Date
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\obj\Debug\TCBROMS Android Webservice.dll
+D:\Development\TCBROMS\TCBROMS\TCBROMS Android Webservice\TCBROMS Android Webservice\obj\Debug\TCBROMS Android Webservice.pdb

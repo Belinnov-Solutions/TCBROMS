@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCBROMS Android Webservice", "TCBROMS Android Webservice\TCBROMS Android Webservice.csproj", "{471BAEAD-BC66-42D0-98F9-45B0A4AB7022}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{05F9AE9A-0491-4FCA-8A64-B3A78FDC8697}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{471BAEAD-BC66-42D0-98F9-45B0A4AB7022}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{471BAEAD-BC66-42D0-98F9-45B0A4AB7022}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{471BAEAD-BC66-42D0-98F9-45B0A4AB7022}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{471BAEAD-BC66-42D0-98F9-45B0A4AB7022}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05F9AE9A-0491-4FCA-8A64-B3A78FDC8697}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05F9AE9A-0491-4FCA-8A64-B3A78FDC8697}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05F9AE9A-0491-4FCA-8A64-B3A78FDC8697}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05F9AE9A-0491-4FCA-8A64-B3A78FDC8697}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4862F38B-15D9-4B50-BD4A-DFDE82E5EF2D}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://belinnov.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Entity\\Entity.csproj
+		SccProjectName1 = Entity
+		SccLocalPath1 = Entity
+		SccProjectUniqueName2 = TCBROMS\u0020Android\u0020Webservice\\TCBROMS\u0020Android\u0020Webservice.csproj
+		SccProjectName2 = TCBROMS\u0020Android\u0020Webservice
+		SccLocalPath2 = TCBROMS\u0020Android\u0020Webservice
+	EndGlobalSection
+EndGlobal

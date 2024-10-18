@@ -1,0 +1,31 @@
+﻿@model  Entity.KitchenOrderResponse
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row" style="margin-top:10px">
+
+    @foreach (var item in Model.KitchenOrders)
+    {
+
+        <div class="col-lg-4 col-md-12">
+            <div class="card card-body" style="background-color:black">
+                <h4 class="card-title" style="color:white">@item.OrderNumber<span class="float-right badge badge-pill badge-danger ml-5">@item.TimeRemaining</span></h4>
+                <p class="card-text" style="color:white">
+                    @foreach (var items in item.Boxes)
+                    {
+                        <h2 style="color:white;font-size:24px">@items.Name</h2>
+                        foreach (var boxitem in items.BoxItems)
+                        {
+                            <ul style="color:white;font-size:22px">
+                                <li>@boxitem.Name</li>
+                            </ul>
+                        }
+                    }
+                </p>
+            </div>
+            &nbsp;&nbsp;
+        </div>
+
+    }
+</div>

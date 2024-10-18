@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/css/mdb.min.css" rel="stylesheet">
+    @*@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+</head>
+<style>
+    /* Smartphones (portrait and landscape) ----------- */
+    @@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        html {
+            font-size: 18px
+        }
+    }
+
+    /* Smartphones (landscape) ----------- */
+    @@media only screen and (min-width : 321px) {
+        html {
+            font-size: 18px
+        }
+    }
+
+    /* Smartphones (portrait) ----------- */
+    @@media only screen and (max-width : 320px) {
+        html {
+            font-size: 18px
+        }
+    }
+
+    /* iPads (portrait and landscape) ----------- */
+    @@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+        html {
+            font-size: 18px
+        }
+    }
+
+    /* iPads (landscape) ----------- */
+    @@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+        html {
+            font-size: 18px
+        }
+    }
+
+    /* iPads (portrait) ----------- */
+    @@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+        html {
+            font-size: 18px
+        }
+    }
+
+    /* Desktops and laptops ----------- */
+    @@media only screen and (min-width : 1224px) {
+        html {
+            font-size: 22px
+        }
+    }
+
+    /* Large screens ----------- */
+    @@media only screen and (min-width : 1824px) {
+        html {
+            font-size: 40px
+        }
+    }
+</style>
+<body>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color" style="background-color:#910029 !important;line-height: 1px">
+
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="#">THE CHINESE BUFFET</a>
+
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+
+            <!-- Links -->
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("KitchenOrder","Kitchen")">Kitchen Order</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("TakeAwayOrder","Kitchen")">TakeAway Orders</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("LogOut","Kitchen")">LogOut</a>
+                </li>
+
+                <!-- Dropdown -->
+                @*<li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>*@
+
+            </ul>
+            <!-- Links -->
+            @*<form class="form-inline">
+                    <div class="md-form my-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    </div>
+                </form>*@
+        </div>
+        <!-- Collapsible content -->
+
+    </nav>
+    <!--/.Navbar-->
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>*@
+    <div class="container body-content">
+        @RenderBody()
+        @*<hr />*@
+        @*<footer>
+                <p>&copy; @DateTime.Now.Year -  THE Chinese Buffet</p>
+            </footer>*@
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

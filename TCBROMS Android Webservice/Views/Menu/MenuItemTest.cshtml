@@ -1,0 +1,287 @@
+﻿@model Entity.Models.GetProductsResponse
+@{
+    Layout = null;
+    var newstring = "";
+    var ImageUrl = @System.Configuration.ConfigurationManager.AppSettings["GettingImageUrl"].ToString();
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/css/mdb.min.css" rel="stylesheet">
+    <style>
+   a{
+       display:inline-block
+   }
+    </style>
+
+</head>
+<body>
+    <script>
+       $(function() {
+       $('a[href*="#"]:not([href="#"])').click(function() {
+         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+           var target = $(this.hash);
+           target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+           if (target.length) {
+             $('html, body').animate({
+               scrollTop: target.offset().top
+             }, 1000);
+             return false;
+           }
+         }
+       });
+     });
+    </script>
+    <script>
+        $('.navbar-nav>li>a').on('click', function () {
+            $('.navbar-collapse').collapse('hide');
+        });
+    </script>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark primary-color" style="background-color:#910029 !important">
+
+        <!-- Navbar brand -->
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+                @foreach (var a in Model.BuffetMenu)
+                {
+                    {
+                         a.Group.Groupname = a.Group.Groupname.Replace(@"\r\n", "");;
+                    }
+                    <li class="nav-item"><a style="white-space: nowrap" href="#@a.Group.Groupname" class="nav-link">@a.Group.Groupname</a></li>
+                }
+            </ul>
+            <!-- Links -->
+
+        </div>
+        <!-- Collapsible content -->
+        <form class="form-inline">
+            <div class="md-form my-0">
+                <input type="text" name="searchbox" id="searchbox" class="filter form-control mr-sm-2" placeholder="Search Dish">
+                @*<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">*@
+            </div>
+        </form>
+    </nav>
+    <div>
+        <div class="container">
+            <div class="row pb-4">
+                <div class="col-12">
+                    <input type="text" name="searchbox" id="searchbox" class="filter form-control" placeholder="Search Dish">
+                </div>
+            </div>
+            @*<div class="row pb-4">
+                <div class="col-12">
+                    <input class="filter" placeholder="filter" />
+                </div>
+            </div>*@
+
+            <div class="row">
+
+                @foreach (var items in Model.BuffetMenu)
+                {
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb40">
+                        <div><p id="@items.Group.Groupname"><h3 style="text-align:center;color:red">@items.Group.Groupname</h3></p></div>
+                        @foreach (var vals in items.GroupProducts)
+                        {
+                            <div class="card" data-string=@vals.Description>
+
+                                <!-- Card image -->
+                                @if (vals.ImageName != null)
+                                {
+                                    <img class="card-img-top" src="@ImageUrl/ProductImage/@vals.ImageName" alt="Card image cap">
+                                }
+                                <!-- Card content -->
+                            <div class="card-body">
+
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <h5 class="card-title" onclick="GetProductInfo(@vals.ProductID)"><a>@vals.Description</a></h5>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        @if (vals.bSpicy == 1)
+                                        {
+                                            <span class="rounded float-right" data-toggle="tooltip" title="Less Spicy"><img src="~/Images/TakeAway/s1.png" style="width:20px;height:20px" /></span>@:&nbsp;
+                                        }
+                                        @if (vals.bSpicy == 2)
+                                        {
+                                            <span class="rounded float-right" data-toggle="tooltip" title="Mid Spicy"><img src="~/Images/TakeAway/s2.png" style="width:20px;height:20px" /></span>@:&nbsp;
+                                        }
+                                        @if (vals.bSpicy == 3)
+                                        {
+                                            <span class="rounded float-right" data-toggle="tooltip" title="High Spicy"><img src="~/Images/TakeAway/s3.png" style="width:20px;height:20px" /></span>@:&nbsp;
+                                        }
+
+                                        @if (vals.bGlutenFree == true)
+                                        {
+                                            <span class="rounded float-right" data-toggle="tooltip" title="GlutenFree"><img src="~/Content/Img/gluten.png" /></span>
+
+                                        }
+                                        @if (vals.bVegetarain == true)
+                                        {
+                                            <span class="rounded float-right" data-toggle="tooltip" title="Vegetarian"><img src="~/Content/Img/rsz_icon.png" /></span>
+
+                                        }
+                                    </div>
+                                    </div>
+                              
+                                  
+                                @*</h5>*@
+                                
+                                @*<h5 class="card-title" onclick="GetProductInfo(@vals.ProductID)"><a>@vals.Description</a><span class="rounded float-right"><img src="~/Content/Img/chili.png" width="20" height="20" /></span></h5>*@
+
+
+                            </div>
+
+                            </div>
+
+                            @*<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb40">
+                            <div class="card" data-string=@vals.Description>
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                                    <div class="dish-img" data-string=@vals.Description style="display:inline-block;"><a href="#"><img src="http://via.placeholder.com/70x70" alt="" class="img-circle"></a> <span class="rtc" style="display:inline-block;margin-right:5px"><h6>@vals.Description</h6></span></div>
+
+                                </div>
+                                </div>
+                            </div>*@
+                            @*</div>*@ <p></p>
+                            @*<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb40">
+                                <div class="card" data-string=@vals.Description>
+                                    <div class="view overlay">
+                                        <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" width="100" height="100" alt="Card image cap">
+                                        <a href="#!">
+                                            <div class="mask rgba-white-slight"></div>
+                                        </a>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">@vals.Description</h5>
+                                    </div>
+                                </div>
+
+                            </div>*@
+                            @*<div class="card col-3 text-center" data-string=@items.Group.Groupname>
+                                <div class="card-header text_center">
+                                    <h4 class="card-title"><a href="#" target="_top">@items.Group.Groupname</a></h4>
+                                </div>
+                                <div class="card-body bg-light">
+                                    <p class="card-text text-center">
+                                        @items.Group.Groupname<br />
+                                        <br />
+                                    </p>
+                                </div>
+                            </div>*@
+
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        @*<div><p id="ProductName"></p></div>*@
+                        <div><p id="MenuDescription"></p></div>
+                        <div><p id="Allergence"></p></div>
+                        <div><p id="SpiceLevel"></p></div>
+                        <div><p id="GlutenFree">GlutenFree:</p></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" style="background-color:#910029 !important"data-dismiss="modal">Close</button>
+                        @*<button type="button" class="btn btn-primary">Save changes</button>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(".filter").on("keyup", function () {
+            var input = $(this).val().toUpperCase();
+
+            $(".card").each(function () {
+                if ($(this).data("string").toUpperCase().indexOf(input) < 0) {
+                    $(this).hide();
+                } else {
+                    $(this).show();
+                }
+            })
+        });
+    </script>
+    <script>
+       $('[data-toggle="tooltip"]').tooltip({
+    trigger : 'hover'
+})  
+    </script>
+    <script>
+        function GetProductInfo(id)
+        {
+            var productId = {
+                ProductID: id
+            }
+             $('#exampleModalLabel').empty();
+                     $('#ProductName').empty();
+                     $('#MenuDescription').empty();
+                     $('#Allergence').empty();                    
+                     $('#SpiceLevel').empty();
+                     $('#GlutenFree').empty();
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("GetProductInfo","Menu")',
+                data: productId,
+                dataType: 'json',
+                success: function (data) {
+                    
+                   
+                    $('#exampleModalLabel').append("<strong>" + data.Description + "</strong>");
+                    //if (data.vMenuDescription == null) {
+                    //    $("#MenuDescription").hide()
+                    //}
+                    //else {
+
+                        $('#MenuDescription').append("<strong>Description</strong>:" + data.vMenuDescription);
+                    //}
+                    if (data.vAllergens == null)
+                    {
+                        $("#Allergence").append("<strong>Allergens</strong>:None" )
+                    }
+                    else {
+                      $('#Allergence').append("<strong>Allergens</strong>:" + data.vAllergens);
+                    }
+                    if (data.vMenuDescription == null && data.vAllergens == null) {
+                        $('#basicExampleModal').modal('hide');
+                    }
+                    else {
+                         $('#basicExampleModal').modal('show');
+                    }
+                      
+                }
+            });
+           
+        }
+    </script>
+</body>
+</html>

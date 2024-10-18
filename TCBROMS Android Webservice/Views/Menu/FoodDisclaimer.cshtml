@@ -1,0 +1,40 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FoodDisclaimer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/css/mdb.min.css" rel="stylesheet">
+
+</head>
+<body style="background-image: url('../../Content/Img/bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 mx-auto">
+                <p><h3 style="color:#910029" class="text-center">Welcome to <br /></h3><h1 style="color:#910029" class="text-center">TCB Dining <br /></h1><h3 style="color:#910029" class="text-center">Table Service Buffet</h3></p><br>
+                <p>
+                    <h5 class="text-center">
+                        @*We will bring your food and drink orders to your table.<br> <br /> Enjoy as many authentic Chinese dishes as you like, but PLEASE DO NOT WASTE FOOD.<br /> <br />
+                        Wastage is charged at £3 per dish.*@
+                        @Html.Raw(ViewBag.discstring)
+                </p></h5>
+                @*<p class="text-center">
+            Great choice! <br />
+            Please be reminded to order what you can finish.
+        </p>*@
+            </div>
+            </div>
+        </div>
+</body>
+</html>

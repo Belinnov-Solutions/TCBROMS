@@ -1,0 +1,60 @@
+﻿@model Entity.User
+@{
+    Layout = "~/Views/Shared/loginlayout.cshtml";
+}<!-- Default form login -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/css/mdb.min.css" rel="stylesheet">
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+                <div class="card-body">
+                    @if (!ViewData.ModelState.IsValid)
+                    {
+                        <div class="alert alert-danger">
+                            @Html.ValidationSummary(false)
+                        </div>
+                    }
+                    <h5 class="card-title text-center">Kitchen Sign in</h5>
+                    @using (Html.BeginForm("index", "kitchen", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+                        <form class="form-signin">
+                            <div class="form-label-group">
+                                @Html.TextBoxFor(model => model.UserCode, new { @class = "form-control ", @placeholder = "User Code", @id = "usercode", required = "required" })
+
+                                @*<input type="email" id="usercode" class="form-control" name="UserCode" placeholder="CODE" required autofocus>*@
+                                @*<label for="inputEmail">Email address</label>*@
+                            </div>
+                            <div>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;
+                            </div>
+                            <div class="form-label-group">
+                                @Html.PasswordFor(model => model.DailyPin, new { @class = "form-control ", @placeholder = "Daily PIN", @id = "Pin", required = "required" })
+
+                                @*<input type="password" id="userpin" class="form-control" name="DailyPin" placeholder="PIN" required>*@
+                                @*<label for="inputPassword">Password</label>*@
+                            </div>
+
+                            <div class="custom-control custom-checkbox mb-3">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                @*<label class="custom-control-label" for="customCheck1">Remember password</label>*@
+                            </div>
+                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" style="background-color:#910029!important">Sign in</button>
+
+                        </form>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

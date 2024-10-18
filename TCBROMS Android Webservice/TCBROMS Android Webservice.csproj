@@ -1,0 +1,975 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{471BAEAD-BC66-42D0-98F9-45B0A4AB7022}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TCBROMS_Android_Webservice</RootNamespace>
+    <AssemblyName>TCBROMS Android Webservice</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HushiController.cs" />
+    <Compile Include="Controllers\KitchenController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\MobileAPIController.cs" />
+    <Compile Include="Controllers\V1Controller.cs" />
+    <Compile Include="Controllers\V2Controller.cs" />
+    <Compile Include="Controllers\V3Controller.cs" />
+    <Compile Include="Controllers\V4Controller.cs" />
+    <Compile Include="Cors\AllowCrossSiteAttribute.cs" />
+    <Compile Include="Filters\InfoLogging.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ExceptionLogging.cs" />
+    <Compile Include="Helpers\MenuType.cs" />
+    <Compile Include="Helpers\ROMSHelper.cs" />
+    <Compile Include="Helpers\TableState.cs" />
+    <Compile Include="Helpers\UserType.cs" />
+    <Compile Include="Models\CustomerService.cs" />
+    <Compile Include="Models\FormattedDbEntityValidationException.cs" />
+    <Compile Include="Models\OrderService.cs" />
+    <Compile Include="Models\HushiDataManager.cs" />
+    <Compile Include="Models\ProductService.cs" />
+    <Compile Include="Models\SqlDataManager.cs" />
+    <Compile Include="Models\TableState_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblAddress.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblAppOption.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblAppOptionRestriction.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblAppUser.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblAvailableDeliveryStaff.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblBarInvoice.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblBarInvoiceItem.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblBoxGroup.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblBoxProductLinker.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblCashingUpHistory.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblChineseWednesday.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblCustomer.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblCustomerActivity.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblCustomerFeedback.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblCustomerOrder.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblCustomerWaitList.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblDailyPin.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblDeliveryPostCode.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblDeliveryStaff.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblDrinksSold.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblDrinksTarget.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblFullDayMenu.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblGiftVoucher.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblHandheldDevice.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbliPodLog.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblJoinedTable.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblMenu.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblMenuItem.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblNoSale.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblNote.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblOptionLinking.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblOrder.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblOrderAdjustmentAfterBill.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblOrderBuffetItem.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblOrderFeedback.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblOrderPart.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblOrderPartDelete.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblOrderPartOption.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblOrderPartOptionDelete.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblOrderPartOptionTemp.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblOrderPartTemp.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblOrderPayment.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblOrderVoucher.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblPrintBuffetItem.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblPrinter.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblPrintFridgeQtyHistory.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblPrintQueue.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblPrintRefillQtyHistory.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblProduct.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblProductGroup.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblProductLinker.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblProductRefill.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblProductRefillTemplate.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblProductRefillTemplatesItem.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblProductsTarget.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblProductTimeRestriction.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblProductType.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblProductTypeTarget.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblProductWastage.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblPromotion.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblRecordPayment.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblRedeemedProduct.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblRefund.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblRequestBilliPod.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblReservation.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblReservationAdvancedBooking.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblReservationMaxPer15Min.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblReservationName.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSagePayment.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSalesRecording.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSCAmountUpdate.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblStockOrder.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblStockOrderProduct.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblStockProductsCount.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblStockTemplate.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblStockTemplateProduct.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblStripePayment.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSupplierOrder.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSupplierOrderImage.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSupplierOrderItem.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblTable.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblTableOrder.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblTablesCleaning.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblTableSection.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblTakeAwayOrder.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblTakeAwayOrderDelivery.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblTillPromotion.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblUnclaimedProduct.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblUser.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblUserLevel.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblUserSwipeHistory.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblWashroomCheck.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblZCardSale.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblZCashSale.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblZHistory.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TCBROMSModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCBROMSModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TCBROMSModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TCBROMSModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCBROMSModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserService.cs" />
+    <Compile Include="Models\usp_AN_AuthenticateUser_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_AN_CheckTableOrder_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_AN_FetchTablesV1_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_AN_FetchTables_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_AN_GetCustomerDetails_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_AN_GetHeadCounts_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_AN_GetPendingRefillProducts_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_AN_GetProductGroup_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_AN_GetProductLinker_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_AN_GetProductsTarget_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_AN_GetProducts_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_AN_GetStockOrderData_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_AN_GetStockOrderItemsData_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_AN_GetTableOrder_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_AN_GetUserOrders_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_DBMAINT_TableSizes_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_ExportProducts_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_MF_GetChangedBarInvoiceItem_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_MF_GetChangedBarInvoice_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_MF_GetChangedOrderParts_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_MF_GetChangedOrderPayments_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_MF_GetChangedOrdersAdjustmentAfterBill_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_MF_GetChangedOrders_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_MF_ShowTakeAwayOrders_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_MR_TableState_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_NR_checkTableiPod_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_NR_SearchProducts_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_NS_AuthenticateUserV2_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_NS_FetchTables_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_NS_GetProductsAndCategories_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_NS_GetProductsInOrderByTable_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_PK_AlteredItemsHistoryForZ_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_PK_GetChangedUserSwipeHistory_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_PK_LoadRefillTemplateItems_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_PK_NoSalesHistoryForZ_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_PK_PaymentHistoryForZ_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_GetDeletedItemsData_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_GetDishOrders_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_GetDrinksSoldData_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_GetDrinksTargetData_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_GetItemsServeData_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_GetLoginData_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_GetOrderedItemsTime_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_GetOrderPartsData_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_GetOrderPaymentsData_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_GetOrdersData_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_GetOrderServeTimeData_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_GetReceivedStockItemsTILL_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_GetReceivedStockTILL_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_GetRedeemedProducts_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_GetRefillItemsData_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_GetRefundData_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_GetRestaurantDetails_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_GetTargetsData_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_GetToiletCheckData_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_GetUnclaimedProductsData_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_GetVoucherDetails_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_LoadRefillTemplateItemsV2_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_LoadRefillTemplateItemsV3_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_LoadRefillTemplateItems_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_PaymentHistoryForZ_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_PaymentHistoryForZ_V1_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_ShowDeliveryOrdersCount_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_ShowTakeAwayOrders_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_VATPaymentSummary_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_SS_VATPaymentSummary_V1_Result.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vAllIndex.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwANProduct.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwANProducts1.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwANTableStatu.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwANTableStatus1.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwANTableStatus2.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwDetailOrderItem.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwItemsModifiedAfterBill.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwItemsOnOrder.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwOrderItem.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwProduct.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwProductsOnOrder.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwProductsOnOrder2.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwProductsOnOrder3.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwProductsOnOrder4.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwProductsOnOrderTemp.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwProductsOptionsOnOrderTemp.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwReservation.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwReservations1.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwTableStatu.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwTableStatusForiPhone.cs">
+      <DependentUpon>TCBROMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Readme\Elmah.txt" />
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\AutoMapper.dll" />
+    <Content Include="bin\Deznu.Products.Common.Utility.dll" />
+    <Content Include="bin\Elmah.Mvc.dll" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\fastjson.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\Stripe.net.dll" />
+    <Content Include="bin\System.Net.Http.Extensions.dll" />
+    <Content Include="bin\System.Net.Http.Formatting.dll" />
+    <Content Include="bin\System.Net.Http.Primitives.dll" />
+    <Content Include="bin\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\System.Web.WebPages.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\WebGrease.dll" />
+    <Content Include="bin\zxing.dll" />
+    <Content Include="bin\zxing.presentation.dll" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Img\chili.png" />
+    <Content Include="Content\Img\gluten.png" />
+    <Content Include="Content\Img\rsz_icon.png" />
+    <Content Include="Content\Img\s1.png" />
+    <Content Include="Content\Img\s2.png" />
+    <Content Include="Content\Img\s3.png" />
+    <Content Include="Content\Img\spicy.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Models\TCBROMSModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TCBROMSModel.edmx</DependentUpon>
+      <LastGenOutput>TCBROMSModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\TCBROMSModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TCBROMSModel.edmx</DependentUpon>
+      <LastGenOutput>TCBROMSModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <EntityDeploy Include="Models\TCBROMSModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TCBROMSModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\TCBROMSModel.edmx.diagram">
+      <DependentUpon>TCBROMSModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="NLog.config" />
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\PublishProfiles\FTP Publish.pubxml" />
+    <None Include="Properties\PublishProfiles\ROMS.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Kitchen\Index.cshtml" />
+    <Content Include="Views\Kitchen\KitchenOrder.cshtml" />
+    <Content Include="Views\Kitchen\TakeAwayOrder.cshtml" />
+    <Content Include="Views\Menu\GetDineInMenu.cshtml" />
+    <Content Include="Views\Menu\GetPrinterReceipts.cshtml" />
+    <Content Include="Views\Menu\MenuItemTest.cshtml" />
+    <Content Include="Views\Shared\loginlayout.cshtml" />
+    <Content Include="Views\Menu\uplodProductExcel.cshtml" />
+    <Content Include="Views\Menu\FoodDisclaimer.cshtml" />
+    <Content Include="Views\Menu\GetMenuAgainstTime.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="bin\reports\180430.123843.11960.pex\dg\" />
+    <Folder Include="bin\reports\180430.123843.11960.pex\fix\out\" />
+    <Folder Include="bin\reports\180430.123843.11960.pex\tests\" />
+    <Folder Include="Content\Images\Signatures\" />
+    <Folder Include="Controllers\v1\" />
+    <Folder Include="Views\Hushi\" />
+    <Folder Include="Views\MobileAPI\" />
+    <Folder Include="Views\V1\" />
+    <Folder Include="Views\V2\" />
+    <Folder Include="Views\V3\" />
+    <Folder Include="Views\V4\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{05f9ae9a-0491-4fca-8a64-b3a78fdc8697}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Yoga Backup _15072021\Work\Development\DotNet\TCB\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=7.0.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.7.0.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Deznu.Products.Common.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Yoga Backup _15072021\Work\Development\DotNet\TCB\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\Deznu.Products.Common.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah.Mvc, Version=2.1.2.1389, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Elmah.Mvc.2.1.2\lib\net40\Elmah.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Yoga Backup _15072021\Work\Development\DotNet\TCB\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Yoga Backup _15072021\Work\Development\DotNet\TCB\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="fastjson, Version=2.1.0.0, Culture=neutral, PublicKeyToken=6b75a806b86095cd, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Yoga Backup _15072021\Work\Development\DotNet\TCB\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\fastjson.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Yoga Backup _15072021\Work\Development\DotNet\TCB\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Yoga Backup _15072021\Work\Development\DotNet\TCB\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Yoga Backup _15072021\Work\Development\DotNet\TCB\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.7.10\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Stripe.net, Version=37.15.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stripe.net.37.15.1\lib\net45\Stripe.net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Yoga Backup _15072021\Work\Development\DotNet\TCB\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Yoga Backup _15072021\Work\Development\DotNet\TCB\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Yoga Backup _15072021\Work\Development\DotNet\TCB\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Yoga Backup _15072021\Work\Development\DotNet\TCB\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Yoga Backup _15072021\Work\Development\DotNet\TCB\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Yoga Backup _15072021\Work\Development\DotNet\TCB\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Yoga Backup _15072021\Work\Development\DotNet\TCB\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Yoga Backup _15072021\Work\Development\DotNet\TCB\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Yoga Backup _15072021\Work\Development\DotNet\TCB\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Yoga Backup _15072021\Work\Development\DotNet\TCB\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Yoga Backup _15072021\Work\Development\DotNet\TCB\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Yoga Backup _15072021\Work\Development\DotNet\TCB\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Yoga Backup _15072021\Work\Development\DotNet\TCB\TCBROMS Android Webservice\TCBROMS Android Webservice\bin\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing, Version=0.16.5.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.5\lib\net48\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.5.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.5\lib\net48\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>27719</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:27719/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

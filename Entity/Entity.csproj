@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{05F9AE9A-0491-4FCA-8A64-B3A78FDC8697}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Entity</RootNamespace>
+    <AssemblyName>Entity</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Elmah, Version=1.2.14706.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="fastjson, Version=2.1.0.0, Culture=neutral, PublicKeyToken=6b75a806b86095cd, processorArchitecture=MSIL">
+      <HintPath>..\packages\fastJSON.2.1.23\lib\net40\fastjson.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="zxing, Version=0.16.5.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.5\lib\net48\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.5.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.5\lib\net48\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Readme\Elmah.txt" />
+    <Content Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminDtos\AdminReservationDto.cs" />
+    <Compile Include="AdminDtos\MenuDto.cs" />
+    <Compile Include="AdminDtos\MenuItemDto.cs" />
+    <Compile Include="AdminDtos\ProductDto.cs" />
+    <Compile Include="AdminDtos\ProductGroupDto.cs" />
+    <Compile Include="AdminDtos\PromotionDto.cs" />
+    <Compile Include="AppOption.cs" />
+    <Compile Include="AppParameters.cs" />
+    <Compile Include="AvailableDeliveryStaff.cs" />
+    <Compile Include="BuffetBox.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="CustomerRewardPoints.cs" />
+    <Compile Include="DeliveryListResponse.cs" />
+    <Compile Include="DeliveryProductsResponse.cs" />
+    <Compile Include="DrinksTarget.cs" />
+    <Compile Include="Enums\ActivityType.cs" />
+    <Compile Include="Enums\OrderType.cs" />
+    <Compile Include="Enums\VoucherTypes.cs" />
+    <Compile Include="FCMMessage.cs" />
+    <Compile Include="FCMResponse.cs" />
+    <Compile Include="FeedbackDetailsDto.cs" />
+    <Compile Include="FeedbackRequest.cs" />
+    <Compile Include="FeedbackResponse.cs" />
+    <Compile Include="HeadCounts.cs" />
+    <Compile Include="Hushi\ProductOrder.cs" />
+    <Compile Include="Hushi\ProductRestaurantList.cs" />
+    <Compile Include="Hushi\PurchaseProduct.cs" />
+    <Compile Include="Hushi\StorageLocationProductList.cs" />
+    <Compile Include="Hushi\LocationProductList.cs" />
+    <Compile Include="Hushi\ProductsByLocation.cs" />
+    <Compile Include="Hushi\ProductsByRestaurant.cs" />
+    <Compile Include="Hushi\RestaurantLocationList.cs" />
+    <Compile Include="Hushi\StorageLocation.cs" />
+    <Compile Include="KitchenOrder.cs" />
+    <Compile Include="KitchenOrderItems.cs" />
+    <Compile Include="KitchenOrderResponse.cs" />
+    <Compile Include="KitchenReceipt.cs" />
+    <Compile Include="LinkedProduct.cs" />
+    <Compile Include="LocationProduct.cs" />
+    <Compile Include="LocationProductResponse.cs" />
+    <Compile Include="MenuItem.cs" />
+    <Compile Include="Models\BuffetItem.cs" />
+    <Compile Include="Models\BuffetItemsSummary.cs" />
+    <Compile Include="Models\BuffetOrder.cs" />
+    <Compile Include="Models\CartModel.cs" />
+    <Compile Include="Models\DashboardModel.cs" />
+    <Compile Include="Models\DeliveryStaffModel.cs" />
+    <Compile Include="Models\GetProductsResponse.cs" />
+    <Compile Include="Models\Menu.cs" />
+    <Compile Include="Models\MenuItemsModel.cs" />
+    <Compile Include="Models\MyDineInOrderModel.cs" />
+    <Compile Include="Models\OrderMenuItemsResponse.cs" />
+    <Compile Include="Models\OrderPrintModel.cs" />
+    <Compile Include="Models\PrintingCountModel.cs" />
+    <Compile Include="Models\ProductGroupModel.cs" />
+    <Compile Include="Models\ProductRedemptionModel.cs" />
+    <Compile Include="Models\ProductRedemptionResponse.cs" />
+    <Compile Include="Models\ReOrderModel.cs" />
+    <Compile Include="Models\RePrintItemsRequest.cs" />
+    <Compile Include="Models\ReservationSlotDto.cs" />
+    <Compile Include="Models\ReservationSlotModel.cs" />
+    <Compile Include="Models\TableSection.cs" />
+    <Compile Include="Models\TakeawayPrintModel.cs" />
+    <Compile Include="Models\VoucherCodeModel.cs" />
+    <Compile Include="OrderBuffetItem.cs" />
+    <Compile Include="OrderDelivery.cs" />
+    <Compile Include="OrderedProductsLocation.cs" />
+    <Compile Include="OrderedProductsResponse.cs" />
+    <Compile Include="OrderedProductsRestaurant.cs" />
+    <Compile Include="OrderFeedback.cs" />
+    <Compile Include="OrderPart.cs" />
+    <Compile Include="OrderPartOption.cs" />
+    <Compile Include="OrderProductsDelivery.cs" />
+    <Compile Include="OrderSubmitRequest.cs" />
+    <Compile Include="Payment.cs" />
+    <Compile Include="PaymentResponse.cs" />
+    <Compile Include="PrintingBatch.cs" />
+    <Compile Include="ProductLocation.cs" />
+    <Compile Include="ProductOrderNo.cs" />
+    <Compile Include="ProductsSaveRequest.cs" />
+    <Compile Include="ProductWastage.cs" />
+    <Compile Include="PromotionDiscount.cs" />
+    <Compile Include="RefillTemplate.cs" />
+    <Compile Include="Reservation.cs" />
+    <Compile Include="NTable.cs" />
+    <Compile Include="ReservationSlot.cs" />
+    <Compile Include="Restaurant.cs" />
+    <Compile Include="ServiceCharge.cs" />
+    <Compile Include="ServiceResponse.cs" />
+    <Compile Include="StockOrder.cs" />
+    <Compile Include="StockProductCount.cs" />
+    <Compile Include="StockOrderProduct.cs" />
+    <Compile Include="StockTemplate.cs" />
+    <Compile Include="SupplierOrder.cs" />
+    <Compile Include="SupplierOrderItem.cs" />
+    <Compile Include="SupplierOrderResponse.cs" />
+    <Compile Include="SyncDeliveryResponse.cs" />
+    <Compile Include="TableCustomer.cs" />
+    <Compile Include="TablePrintingBatch.cs" />
+    <Compile Include="TakeAwayOrder.cs" />
+    <Compile Include="TakeAwayOrderDelivery.cs" />
+    <Compile Include="Targets.cs" />
+    <Compile Include="TemplateProduct.cs" />
+    <Compile Include="UnPrintedItemsModel.cs" />
+    <Compile Include="UserOrders.cs" />
+    <Compile Include="OrderSubmitResponse.cs" />
+    <Compile Include="Printer.cs" />
+    <Compile Include="ProductGroup.cs" />
+    <Compile Include="ProductLinker.cs" />
+    <Compile Include="AllProducts.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="RefillProduct.cs" />
+    <Compile Include="RefillProductRequest.cs" />
+    <Compile Include="TableOrder.cs" />
+    <Compile Include="Table.cs" />
+    <Compile Include="TablesList.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="VerifyOrderProductsResponse.cs" />
+    <Compile Include="WaitingCustomer.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>27804</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:27804/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

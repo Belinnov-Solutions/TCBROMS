@@ -1,0 +1,2989 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ChineseTillModelStoreContainer" CdmEntityContainer="ChineseTillEntities1">
+    <EntitySetMapping Name="tblAddresses">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblAddress">
+        <MappingFragment StoreEntitySet="tblAddress">
+          <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+          <ScalarProperty Name="HouseNo" ColumnName="HouseNo" />
+          <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+          <ScalarProperty Name="AddressFull" ColumnName="AddressFull" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAvailableDeliveryStaffs">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblAvailableDeliveryStaff">
+        <MappingFragment StoreEntitySet="tblAvailableDeliveryStaff">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DeliveryStaffId" ColumnName="DeliveryStaffId" />
+          <ScalarProperty Name="Available" ColumnName="Available" />
+          <ScalarProperty Name="NextAvailableTime" ColumnName="NextAvailableTime" />
+          <ScalarProperty Name="MaxOrders" ColumnName="MaxOrders" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblBarInvoices">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblBarInvoice">
+        <MappingFragment StoreEntitySet="tblBarInvoice">
+          <ScalarProperty Name="BarInvoiceID" ColumnName="BarInvoiceID" />
+          <ScalarProperty Name="TableFK" ColumnName="TableFK" />
+          <ScalarProperty Name="TabName" ColumnName="TabName" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+          <ScalarProperty Name="BarInvoiceTotal" ColumnName="BarInvoiceTotal" />
+          <ScalarProperty Name="AmountPaid" ColumnName="AmountPaid" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="PCName" ColumnName="PCName" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblBarInvoiceItems">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblBarInvoiceItem">
+        <MappingFragment StoreEntitySet="tblBarInvoiceItem">
+          <ScalarProperty Name="BarInvoiceItemID" ColumnName="BarInvoiceItemID" />
+          <ScalarProperty Name="BarInvoiceFK" ColumnName="BarInvoiceFK" />
+          <ScalarProperty Name="ProductFK" ColumnName="ProductFK" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="ProductDesc" ColumnName="ProductDesc" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ItemTotal" ColumnName="ItemTotal" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblBoxGroups">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblBoxGroup">
+        <MappingFragment StoreEntitySet="tblBoxGroup">
+          <ScalarProperty Name="BoxGroupId" ColumnName="BoxGroupId" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="ItemCount" ColumnName="ItemCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblBoxProductLinkers">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblBoxProductLinker">
+        <MappingFragment StoreEntitySet="tblBoxProductLinker">
+          <ScalarProperty Name="LinkID" ColumnName="LinkID" />
+          <ScalarProperty Name="BoxGroupId" ColumnName="BoxGroupId" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCashingUpHistories">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblCashingUpHistory">
+        <MappingFragment StoreEntitySet="tblCashingUpHistory">
+          <ScalarProperty Name="ZID" ColumnName="ZID" />
+          <ScalarProperty Name="PCName" ColumnName="PCName" />
+          <ScalarProperty Name="CashierName" ColumnName="CashierName" />
+          <ScalarProperty Name="ZDate" ColumnName="ZDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblChineseWednesdays">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblChineseWednesday">
+        <MappingFragment StoreEntitySet="tblChineseWednesday">
+          <ScalarProperty Name="ChineseWednesdayID" ColumnName="ChineseWednesdayID" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="PromoCode" ColumnName="PromoCode" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Redeemed" ColumnName="Redeemed" />
+          <ScalarProperty Name="DateRedeemed" ColumnName="DateRedeemed" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="DateValid" ColumnName="DateValid" />
+          <ScalarProperty Name="RestaurantID" ColumnName="RestaurantID" />
+          <ScalarProperty Name="PromoID" ColumnName="PromoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCustomerActivities">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblCustomerActivity">
+        <MappingFragment StoreEntitySet="tblCustomerActivity">
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="RewardPoints" ColumnName="RewardPoints" />
+          <ScalarProperty Name="RedeemPoints" ColumnName="RedeemPoints" />
+          <ScalarProperty Name="Paid" ColumnName="Paid" />
+          <ScalarProperty Name="WebUpload" ColumnName="WebUpload" />
+          <ScalarProperty Name="ActivityType" ColumnName="ActivityType" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDailyPins">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblDailyPin">
+        <MappingFragment StoreEntitySet="tblDailyPin">
+          <ScalarProperty Name="thePrimary" ColumnName="thePrimary" />
+          <ScalarProperty Name="pin" ColumnName="pin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDeliveryPostCodes">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblDeliveryPostCode">
+        <MappingFragment StoreEntitySet="tblDeliveryPostCode">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+          <ScalarProperty Name="Delivery" ColumnName="Delivery" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="PostCodePriority" ColumnName="PostCodePriority" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDeliveryStaffs">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblDeliveryStaff">
+        <MappingFragment StoreEntitySet="tblDeliveryStaff">
+          <ScalarProperty Name="available" ColumnName="available" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DeliveryStaffId" ColumnName="DeliveryStaffId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="OutForDelivery" ColumnName="OutForDelivery" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDrinksSolds">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblDrinksSold">
+        <MappingFragment StoreEntitySet="tblDrinksSold">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="SecondRound" ColumnName="SecondRound" />
+          <ScalarProperty Name="WebUpload" ColumnName="WebUpload" />
+          <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
+          <ScalarProperty Name="AdditionalDrink" ColumnName="AdditionalDrink" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbliPodLogs">
+      <EntityTypeMapping TypeName="ChineseTillModel.tbliPodLog">
+        <MappingFragment StoreEntitySet="tbliPodLog">
+          <ScalarProperty Name="iPodLogID" ColumnName="iPodLogID" />
+          <ScalarProperty Name="vMessage" ColumnName="vMessage" />
+          <ScalarProperty Name="vFunction" ColumnName="vFunction" />
+          <ScalarProperty Name="vPage" ColumnName="vPage" />
+          <ScalarProperty Name="iUserID" ColumnName="iUserID" />
+          <ScalarProperty Name="Date_Created" ColumnName="Date_Created" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblMenus">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblMenu">
+        <MappingFragment StoreEntitySet="tblMenu">
+          <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+          <ScalarProperty Name="MenuDescription" ColumnName="MenuDescription" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblMenuItems">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblMenuItem">
+        <MappingFragment StoreEntitySet="tblMenuItems">
+          <ScalarProperty Name="MenuItemID" ColumnName="MenuItemID" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="DirectPrint" ColumnName="DirectPrint" />
+          <ScalarProperty Name="MaxQuantity" ColumnName="MaxQuantity" />
+          <ScalarProperty Name="bOnsite" ColumnName="bOnsite" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="SupportItem" ColumnName="SupportItem" />
+          <ScalarProperty Name="LastAvailable" ColumnName="LastAvailable" />
+          <ScalarProperty Name="AavilabilityChangedBy" ColumnName="AavilabilityChangedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblNoSales">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblNoSale">
+        <MappingFragment StoreEntitySet="tblNoSale">
+          <ScalarProperty Name="NoSaleID" ColumnName="NoSaleID" />
+          <ScalarProperty Name="PCName" ColumnName="PCName" />
+          <ScalarProperty Name="UserFK" ColumnName="UserFK" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblNotes">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblNote">
+        <MappingFragment StoreEntitySet="tblNote">
+          <ScalarProperty Name="NoteID" ColumnName="NoteID" />
+          <ScalarProperty Name="NoteText" ColumnName="NoteText" />
+          <ScalarProperty Name="NoteLiveDate" ColumnName="NoteLiveDate" />
+          <ScalarProperty Name="NoteEndDate" ColumnName="NoteEndDate" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOptionLinkings">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblOptionLinking">
+        <MappingFragment StoreEntitySet="tblOptionLinking">
+          <ScalarProperty Name="iOptionLinkingID" ColumnName="iOptionLinkingID" />
+          <ScalarProperty Name="iTempOptionID" ColumnName="iTempOptionID" />
+          <ScalarProperty Name="iNewOptionID" ColumnName="iNewOptionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOrders">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblOrder">
+        <MappingFragment StoreEntitySet="tblOrder">
+          <ScalarProperty Name="ParentOrderGUID" ColumnName="ParentOrderGUID" />
+          <ScalarProperty Name="PayAsYouGo" ColumnName="PayAsYouGo" />
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="Paid" ColumnName="Paid" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+          <ScalarProperty Name="GrandTotal" ColumnName="GrandTotal" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="TabID" ColumnName="TabID" />
+          <ScalarProperty Name="TabName" ColumnName="TabName" />
+          <ScalarProperty Name="DatePaid" ColumnName="DatePaid" />
+          <ScalarProperty Name="TotalPaid" ColumnName="TotalPaid" />
+          <ScalarProperty Name="Change" ColumnName="Change" />
+          <ScalarProperty Name="BillPrinted" ColumnName="BillPrinted" />
+          <ScalarProperty Name="VATReceiptPrinted" ColumnName="VATReceiptPrinted" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="TakeAway" ColumnName="TakeAway" />
+          <ScalarProperty Name="TakeAwayName" ColumnName="TakeAwayName" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="WebUploadSuccessful" ColumnName="WebUploadSuccessful" />
+          <ScalarProperty Name="CustCount" ColumnName="CustCount" />
+          <ScalarProperty Name="PrevCust" ColumnName="PrevCust" />
+          <ScalarProperty Name="DrinksRep" ColumnName="DrinksRep" />
+          <ScalarProperty Name="CoffeeConfirm" ColumnName="CoffeeConfirm" />
+          <ScalarProperty Name="AdCount" ColumnName="AdCount" />
+          <ScalarProperty Name="KdCount" ColumnName="KdCount" />
+          <ScalarProperty Name="JnCount" ColumnName="JnCount" />
+          <ScalarProperty Name="SplitBill" ColumnName="SplitBill" />
+          <ScalarProperty Name="MovedFromOrderGUID" ColumnName="MovedFromOrderGUID" />
+          <ScalarProperty Name="TipAmount" ColumnName="TipAmount" />
+          <ScalarProperty Name="ServiceRequired" ColumnName="ServiceRequired" />
+          <ScalarProperty Name="DeliveryCharges" ColumnName="DeliveryCharges" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="ServiceChargeApplicable" ColumnName="ServiceChargeApplicable" />
+          <ScalarProperty Name="ServiceCharge" ColumnName="ServiceCharge" />
+          <ScalarProperty Name="LockedForPayment" ColumnName="LockedForPayment" />
+          <ScalarProperty Name="LockedForOrdering" ColumnName="LockedForOrdering" />
+          <ScalarProperty Name="HideDrinkMenu" ColumnName="HideDrinkMenu" />
+          <ScalarProperty Name="SCRate" ColumnName="SCRate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOrderAdjustmentAfterBills">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblOrderAdjustmentAfterBill">
+        <MappingFragment StoreEntitySet="tblOrderAdjustmentAfterBill">
+          <ScalarProperty Name="AdjustmentID" ColumnName="AdjustmentID" />
+          <ScalarProperty Name="ProductFK" ColumnName="ProductFK" />
+          <ScalarProperty Name="UserFK" ColumnName="UserFK" />
+          <ScalarProperty Name="Removed" ColumnName="Removed" />
+          <ScalarProperty Name="Added" ColumnName="Added" />
+          <ScalarProperty Name="PCName" ColumnName="PCName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOrderBuffetItems">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblOrderBuffetItem">
+        <MappingFragment StoreEntitySet="tblOrderBuffetItems">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TableId" ColumnName="TableId" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Printed" ColumnName="Printed" />
+          <ScalarProperty Name="DateServed" ColumnName="DateServed" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="WebUpload" ColumnName="WebUpload" />
+          <ScalarProperty Name="Cancelled" ColumnName="Cancelled" />
+          <ScalarProperty Name="DateCancelled" ColumnName="DateCancelled" />
+          <ScalarProperty Name="CancelledBy" ColumnName="CancelledBy" />
+          <ScalarProperty Name="DatePrinted" ColumnName="DatePrinted" />
+          <ScalarProperty Name="BatchNo" ColumnName="BatchNo" />
+          <ScalarProperty Name="BatchTime" ColumnName="BatchTime" />
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+          <ScalarProperty Name="ReOrder" ColumnName="ReOrder" />
+          <ScalarProperty Name="Delivered" ColumnName="Delivered" />
+          <ScalarProperty Name="DeviceType" ColumnName="DeviceType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOrderFeedbacks">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblOrderFeedback">
+        <MappingFragment StoreEntitySet="tblOrderFeedback">
+          <ScalarProperty Name="FeedbackId" ColumnName="FeedbackId" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Feedback" ColumnName="Feedback" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOrderParts">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblOrderPart">
+        <MappingFragment StoreEntitySet="tblOrderPart">
+          <ScalarProperty Name="Locked" ColumnName="Locked" />
+          <ScalarProperty Name="OrderPartID" ColumnName="OrderPartID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="OldOrderPartID" ColumnName="OldOrderPartID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateServed" ColumnName="DateServed" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="WebUpload" ColumnName="WebUpload" />
+          <ScalarProperty Name="VAT" ColumnName="VAT" />
+          <ScalarProperty Name="Paid" ColumnName="Paid" />
+          <ScalarProperty Name="BatchNo" ColumnName="BatchNo" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="VendorTxCode" ColumnName="VendorTxCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOrderPartDeletes">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblOrderPartDelete">
+        <MappingFragment StoreEntitySet="tblOrderPartDelete">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="OrderPartID" ColumnName="OrderPartID" />
+          <ScalarProperty Name="BillPrinted" ColumnName="BillPrinted" />
+          <ScalarProperty Name="TableDel" ColumnName="TableDel" />
+          <ScalarProperty Name="WebUpload" ColumnName="WebUpload" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOrderPartOptions">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblOrderPartOption">
+        <MappingFragment StoreEntitySet="tblOrderPartOption">
+          <ScalarProperty Name="OrderPartOptionID" ColumnName="OrderPartOptionID" />
+          <ScalarProperty Name="OrderPartId" ColumnName="OrderPartId" />
+          <ScalarProperty Name="ProductOptionID" ColumnName="ProductOptionID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="VAT" ColumnName="VAT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOrderPartOptionDeletes">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblOrderPartOptionDelete">
+        <MappingFragment StoreEntitySet="tblOrderPartOptionDelete">
+          <ScalarProperty Name="OrderPartOptionID" ColumnName="OrderPartOptionID" />
+          <ScalarProperty Name="OrderPartId" ColumnName="OrderPartId" />
+          <ScalarProperty Name="ProductOptionID" ColumnName="ProductOptionID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOrderPayments">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblOrderPayment">
+        <MappingFragment StoreEntitySet="tblOrderPayment">
+          <ScalarProperty Name="PaymentGUID" ColumnName="PaymentGUID" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+          <ScalarProperty Name="PaymentValue" ColumnName="PaymentValue" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="PCName" ColumnName="PCName" />
+          <ScalarProperty Name="Change" ColumnName="Change" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="TipAmount" ColumnName="TipAmount" />
+          <ScalarProperty Name="DeliveryCharges" ColumnName="DeliveryCharges" />
+          <ScalarProperty Name="ServiceCharge" ColumnName="ServiceCharge" />
+          <ScalarProperty Name="PGName" ColumnName="PGName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOrderVouchers">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblOrderVoucher">
+        <MappingFragment StoreEntitySet="tblOrderVouchers">
+          <ScalarProperty Name="OrderVoucherId" ColumnName="OrderVoucherId" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="VoucherNumber" ColumnName="VoucherNumber" />
+          <ScalarProperty Name="VoucherValue" ColumnName="VoucherValue" />
+          <ScalarProperty Name="VoucherType" ColumnName="VoucherType" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="PartAmount" ColumnName="PartAmount" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="VoucherAmount" ColumnName="VoucherAmount" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="StopPromotion" ColumnName="StopPromotion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPrinters">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblPrinter">
+        <MappingFragment StoreEntitySet="tblPrinter">
+          <ScalarProperty Name="PrinterID" ColumnName="PrinterID" />
+          <ScalarProperty Name="PrinterName" ColumnName="PrinterName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="KitchenPrinter" ColumnName="KitchenPrinter" />
+          <ScalarProperty Name="Offline" ColumnName="Offline" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPrintFridgeQtyHistories">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblPrintFridgeQtyHistory">
+        <MappingFragment StoreEntitySet="tblPrintFridgeQtyHistory">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="PDate" ColumnName="PDate" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPrintQueues">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblPrintQueue">
+        <MappingFragment StoreEntitySet="tblPrintQueue">
+          <ScalarProperty Name="PrintQueueID" ColumnName="PrintQueueID" />
+          <ScalarProperty Name="UserFK" ColumnName="UserFK" />
+          <ScalarProperty Name="PCName" ColumnName="PCName" />
+          <ScalarProperty Name="ToPrinter" ColumnName="ToPrinter" />
+          <ScalarProperty Name="Receipt" ColumnName="Receipt" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DatePrinted" ColumnName="DatePrinted" />
+          <ScalarProperty Name="DateProcessed" ColumnName="DateProcessed" />
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+          <ScalarProperty Name="ProcessedBy" ColumnName="ProcessedBy" />
+          <ScalarProperty Name="BatchNo" ColumnName="BatchNo" />
+          <ScalarProperty Name="TableNumber" ColumnName="TableNumber" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="OldBatchNo" ColumnName="OldBatchNo" />
+          <ScalarProperty Name="TicketNo" ColumnName="TicketNo" />
+          <ScalarProperty Name="TicketStatus" ColumnName="TicketStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPrintRefillQtyHistories">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblPrintRefillQtyHistory">
+        <MappingFragment StoreEntitySet="tblPrintRefillQtyHistory">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="PDate" ColumnName="PDate" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProducts">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblProduct">
+        <MappingFragment StoreEntitySet="tblProduct">
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProductGroupID" ColumnName="ProductGroupID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ChineseName" ColumnName="ChineseName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="CustomisePrice" ColumnName="CustomisePrice" />
+          <ScalarProperty Name="Forecolour" ColumnName="Forecolour" />
+          <ScalarProperty Name="Backcolour" ColumnName="Backcolour" />
+          <ScalarProperty Name="FoodRefil" ColumnName="FoodRefil" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="IsTakeaway" ColumnName="IsTakeaway" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="FridgeQty" ColumnName="FridgeQty" />
+          <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
+          <ScalarProperty Name="IsFridgeItem" ColumnName="IsFridgeItem" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="bVegetarain" ColumnName="bVegetarain" />
+          <ScalarProperty Name="bSpicy" ColumnName="bSpicy" />
+          <ScalarProperty Name="bGlutenFree" ColumnName="bGlutenFree" />
+          <ScalarProperty Name="vMenuDescription" ColumnName="vMenuDescription" />
+          <ScalarProperty Name="vAllergens" ColumnName="vAllergens" />
+          <ScalarProperty Name="Available" ColumnName="Available" />
+          <ScalarProperty Name="bOnsite" ColumnName="bOnsite" />
+          <ScalarProperty Name="EnglishName" ColumnName="EnglishName" />
+          <ScalarProperty Name="VAT" ColumnName="VAT" />
+          <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+          <ScalarProperty Name="RewardPoints" ColumnName="RewardPoints" />
+          <ScalarProperty Name="RedemptionPoints" ColumnName="RedemptionPoints" />
+          <ScalarProperty Name="RewardStartDate" ColumnName="RewardStartDate" />
+          <ScalarProperty Name="RewardEndDate" ColumnName="RewardEndDate" />
+          <ScalarProperty Name="RedeemStartDate" ColumnName="RedeemStartDate" />
+          <ScalarProperty Name="RedeemEndDate" ColumnName="RedeemEndDate" />
+          <ScalarProperty Name="RedeemValidDays" ColumnName="RedeemValidDays" />
+          <ScalarProperty Name="Calories" ColumnName="Calories" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProductGroups">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblProductGroup">
+        <MappingFragment StoreEntitySet="tblProductGroup">
+          <ScalarProperty Name="ProductGroupID" ColumnName="ProductGroupID" />
+          <ScalarProperty Name="Groupname" ColumnName="Groupname" />
+          <ScalarProperty Name="ParentGroupID" ColumnName="ParentGroupID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="bOnsite" ColumnName="bOnsite" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProductLinkers">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblProductLinker">
+        <MappingFragment StoreEntitySet="tblProductLinker">
+          <ScalarProperty Name="LinkID" ColumnName="LinkID" />
+          <ScalarProperty Name="PrimaryProductID" ColumnName="PrimaryProductID" />
+          <ScalarProperty Name="SecondaryProductID" ColumnName="SecondaryProductID" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProductRefills">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblProductRefill">
+        <MappingFragment StoreEntitySet="tblProductRefill">
+          <ScalarProperty Name="ProductRefillID" ColumnName="ProductRefillID" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="ProductSize" ColumnName="ProductSize" />
+          <ScalarProperty Name="UserFK" ColumnName="UserFK" />
+          <ScalarProperty Name="PCName" ColumnName="PCName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="DateRefill" ColumnName="DateRefill" />
+          <ScalarProperty Name="ProductQty" ColumnName="ProductQty" />
+          <ScalarProperty Name="WebUpload" ColumnName="WebUpload" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProductRefillTemplates">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblProductRefillTemplate">
+        <MappingFragment StoreEntitySet="tblProductRefillTemplates">
+          <ScalarProperty Name="iRefillTemplateID" ColumnName="iRefillTemplateID" />
+          <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProductRefillTemplatesItems">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblProductRefillTemplatesItem">
+        <MappingFragment StoreEntitySet="tblProductRefillTemplatesItems">
+          <ScalarProperty Name="iRefillTemplateItemID" ColumnName="iRefillTemplateItemID" />
+          <ScalarProperty Name="RefillTemplateFK" ColumnName="RefillTemplateFK" />
+          <ScalarProperty Name="ProductFK" ColumnName="ProductFK" />
+          <ScalarProperty Name="SmallPortion" ColumnName="SmallPortion" />
+          <ScalarProperty Name="RegularPortion" ColumnName="RegularPortion" />
+          <ScalarProperty Name="LargePortion" ColumnName="LargePortion" />
+          <ScalarProperty Name="Options" ColumnName="Options" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="ProductQty" ColumnName="ProductQty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProductTimeRestrictions">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblProductTimeRestriction">
+        <MappingFragment StoreEntitySet="tblProductTimeRestriction">
+          <ScalarProperty Name="RestrictionID" ColumnName="RestrictionID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="DayID" ColumnName="DayID" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProductTypes">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblProductType">
+        <MappingFragment StoreEntitySet="tblProductTypes">
+          <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
+          <ScalarProperty Name="TypeDescription" ColumnName="TypeDescription" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProductWastages">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblProductWastage">
+        <MappingFragment StoreEntitySet="tblProductWastage">
+          <ScalarProperty Name="WastageID" ColumnName="WastageID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPromotions">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblPromotion">
+        <MappingFragment StoreEntitySet="tblPromotions">
+          <ScalarProperty Name="PromoID" ColumnName="PromoID" />
+          <ScalarProperty Name="Promotion" ColumnName="Promotion" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRedeemedProducts">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblRedeemedProduct">
+        <MappingFragment StoreEntitySet="tblRedeemedProducts">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Points" ColumnName="Points" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="WebUpload" ColumnName="WebUpload" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRefunds">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblRefund">
+        <MappingFragment StoreEntitySet="tblRefund">
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="WebUpload" ColumnName="WebUpload" />
+          <ScalarProperty Name="AlcoholRefund" ColumnName="AlcoholRefund" />
+          <ScalarProperty Name="FoodRefund" ColumnName="FoodRefund" />
+          <ScalarProperty Name="TotalRefund" ColumnName="TotalRefund" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRequestBilliPods">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblRequestBilliPod">
+        <MappingFragment StoreEntitySet="tblRequestBilliPod">
+          <ScalarProperty Name="iRequestBillID" ColumnName="iRequestBillID" />
+          <ScalarProperty Name="dtDateTimeCreated" ColumnName="dtDateTimeCreated" />
+          <ScalarProperty Name="iTableID" ColumnName="iTableID" />
+          <ScalarProperty Name="bPrinted" ColumnName="bPrinted" />
+          <ScalarProperty Name="dtDateTimePrinted" ColumnName="dtDateTimePrinted" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblReservations">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblReservation">
+        <MappingFragment StoreEntitySet="tblReservation">
+          <ScalarProperty Name="ReservationID" ColumnName="ReservationID" />
+          <ScalarProperty Name="Tables" ColumnName="Tables" />
+          <ScalarProperty Name="ReservationUnder" ColumnName="ReservationUnder" />
+          <ScalarProperty Name="ReservationTime" ColumnName="ReservationTime" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="ReservationDate" ColumnName="ReservationDate" />
+          <ScalarProperty Name="Delind" ColumnName="Delind" />
+          <ScalarProperty Name="ReservationNotes" ColumnName="ReservationNotes" />
+          <ScalarProperty Name="NoOfGuests" ColumnName="NoOfGuests" />
+          <ScalarProperty Name="OnlineReservation" ColumnName="OnlineReservation" />
+          <ScalarProperty Name="bDepositPaid" ColumnName="bDepositPaid" />
+          <ScalarProperty Name="ForeName" ColumnName="ForeName" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+          <ScalarProperty Name="C2P" ColumnName="C2P" />
+          <ScalarProperty Name="C2Pvalue" ColumnName="C2Pvalue" />
+          <ScalarProperty Name="NoOfSeats" ColumnName="NoOfSeats" />
+          <ScalarProperty Name="NoOfHighChairs" ColumnName="NoOfHighChairs" />
+          <ScalarProperty Name="NoOfWheelChairs" ColumnName="NoOfWheelChairs" />
+          <ScalarProperty Name="NoOfPrams" ColumnName="NoOfPrams" />
+          <ScalarProperty Name="LastContacted" ColumnName="LastContacted" />
+          <ScalarProperty Name="ProcessedOrderGUID" ColumnName="ProcessedOrderGUID" />
+          <ScalarProperty Name="ProcessedDate" ColumnName="ProcessedDate" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="AdCount" ColumnName="AdCount" />
+          <ScalarProperty Name="KdCount" ColumnName="KdCount" />
+          <ScalarProperty Name="JnCount" ColumnName="JnCount" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ReservationType" ColumnName="ReservationType" />
+          <ScalarProperty Name="TelReservation" ColumnName="TelReservation" />
+          <ScalarProperty Name="SMSDepPaid" ColumnName="SMSDepPaid" />
+          <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+          <ScalarProperty Name="UniqueCode" ColumnName="UniqueCode" />
+          <ScalarProperty Name="UniqueCodeUsed" ColumnName="UniqueCodeUsed" />
+          <ScalarProperty Name="WebUpload" ColumnName="WebUpload" />
+          <ScalarProperty Name="AdminReservationId" ColumnName="AdminReservationId" />
+          <ScalarProperty Name="InLounge" ColumnName="InLounge" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblReservationAdvancedBookings">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblReservationAdvancedBooking">
+        <MappingFragment StoreEntitySet="tblReservationAdvancedBookings">
+          <ScalarProperty Name="tDay" ColumnName="tDay" />
+          <ScalarProperty Name="AdvancedBookingTime" ColumnName="AdvancedBookingTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblReservationMaxPer15Min">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblReservationMaxPer15Min">
+        <MappingFragment StoreEntitySet="tblReservationMaxPer15Min">
+          <ScalarProperty Name="tDay" ColumnName="tDay" />
+          <ScalarProperty Name="tTime" ColumnName="tTime" />
+          <ScalarProperty Name="MaxReservations" ColumnName="MaxReservations" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblReservationNames">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblReservationName">
+        <MappingFragment StoreEntitySet="tblReservationName">
+          <ScalarProperty Name="ReservationNameID" ColumnName="ReservationNameID" />
+          <ScalarProperty Name="Forename" ColumnName="Forename" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Delind" ColumnName="Delind" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSalesRecordings">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblSalesRecording">
+        <MappingFragment StoreEntitySet="tblSalesRecording">
+          <ScalarProperty Name="WebUpload" ColumnName="WebUpload" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+          <ScalarProperty Name="PCName" ColumnName="PCName" />
+          <ScalarProperty Name="CashierName" ColumnName="CashierName" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="CashSales" ColumnName="CashSales" />
+          <ScalarProperty Name="CardSales" ColumnName="CardSales" />
+          <ScalarProperty Name="ChequeSales" ColumnName="ChequeSales" />
+          <ScalarProperty Name="PDQSales" ColumnName="PDQSales" />
+          <ScalarProperty Name="PDQTips" ColumnName="PDQTips" />
+          <ScalarProperty Name="AmexSales" ColumnName="AmexSales" />
+          <ScalarProperty Name="AmexTips" ColumnName="AmexTips" />
+          <ScalarProperty Name="CalculatedCash" ColumnName="CalculatedCash" />
+          <ScalarProperty Name="AttemptedCash" ColumnName="AttemptedCash" />
+          <ScalarProperty Name="AcceptedCash" ColumnName="AcceptedCash" />
+          <ScalarProperty Name="ConfirmedCash" ColumnName="ConfirmedCash" />
+          <ScalarProperty Name="HQSubmit" ColumnName="HQSubmit" />
+          <ScalarProperty Name="Hide" ColumnName="Hide" />
+          <ScalarProperty Name="Cash5" ColumnName="Cash5" />
+          <ScalarProperty Name="Cash20" ColumnName="Cash20" />
+          <ScalarProperty Name="Card5" ColumnName="Card5" />
+          <ScalarProperty Name="Card20" ColumnName="Card20" />
+          <ScalarProperty Name="MP5" ColumnName="MP5" />
+          <ScalarProperty Name="MP20" ColumnName="MP20" />
+          <ScalarProperty Name="MPTips" ColumnName="MPTips" />
+          <ScalarProperty Name="CardServiceCharge" ColumnName="CardServiceCharge" />
+          <ScalarProperty Name="MPServiceCharge" ColumnName="MPServiceCharge" />
+          <ScalarProperty Name="CashServiceCharge" ColumnName="CashServiceCharge" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblStockOrders">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblStockOrder">
+        <MappingFragment StoreEntitySet="tblStockOrder">
+          <ScalarProperty Name="PurchaseOrderNumber" ColumnName="PurchaseOrderNumber" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="iTemplateID" ColumnName="iTemplateID" />
+          <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+          <ScalarProperty Name="Completed" ColumnName="Completed" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="DateOrdered" ColumnName="DateOrdered" />
+          <ScalarProperty Name="RequiredBy" ColumnName="RequiredBy" />
+          <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
+          <ScalarProperty Name="OldPONumber" ColumnName="OldPONumber" />
+          <ScalarProperty Name="WebUpload" ColumnName="WebUpload" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblStockOrderProducts">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblStockOrderProduct">
+        <MappingFragment StoreEntitySet="tblStockOrderProduct">
+          <ScalarProperty Name="StockOrderProductID" ColumnName="StockOrderProductID" />
+          <ScalarProperty Name="PurchaseOrderNumberFK" ColumnName="PurchaseOrderNumberFK" />
+          <ScalarProperty Name="ProductFK" ColumnName="ProductFK" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="delInd" ColumnName="delInd" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="ItemTotal" ColumnName="ItemTotal" />
+          <ScalarProperty Name="Received" ColumnName="Received" />
+          <ScalarProperty Name="Cancelled" ColumnName="Cancelled" />
+          <ScalarProperty Name="WebUpload" ColumnName="WebUpload" />
+          <ScalarProperty Name="MaxQuantity" ColumnName="MaxQuantity" />
+          <ScalarProperty Name="Counted" ColumnName="Counted" />
+          <ScalarProperty Name="StockQuantity" ColumnName="StockQuantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblStockProductsCounts">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblStockProductsCount">
+        <MappingFragment StoreEntitySet="tblStockProductsCount">
+          <ScalarProperty Name="StockProductCountID" ColumnName="StockProductCountID" />
+          <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="Ordered" ColumnName="Ordered" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblStockTemplateProducts">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblStockTemplateProduct">
+        <MappingFragment StoreEntitySet="tblStockTemplateProducts">
+          <ScalarProperty Name="StockTemplateProductID" ColumnName="StockTemplateProductID" />
+          <ScalarProperty Name="TemplateFK" ColumnName="TemplateFK" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="MaxQuantity" ColumnName="MaxQuantity" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblStockTemplates">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblStockTemplate">
+        <MappingFragment StoreEntitySet="tblStockTemplates">
+          <ScalarProperty Name="StockTemplateID" ColumnName="StockTemplateID" />
+          <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblStripePayments">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblStripePayment">
+        <MappingFragment StoreEntitySet="tblStripePayment">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="ClientSecret" ColumnName="ClientSecret" />
+          <ScalarProperty Name="Success" ColumnName="Success" />
+          <ScalarProperty Name="FailureMessage" ColumnName="FailureMessage" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="PaymentId" ColumnName="PaymentId" />
+          <ScalarProperty Name="VendorTxCode" ColumnName="VendorTxCode" />
+          <ScalarProperty Name="DeviceType" ColumnName="DeviceType" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="SCAmount" ColumnName="SCAmount" />
+          <ScalarProperty Name="TipAmount" ColumnName="TipAmount" />
+          <ScalarProperty Name="PaymentPrice" ColumnName="PaymentPrice" />
+          <ScalarProperty Name="SplitPayment" ColumnName="SplitPayment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSupplierOrders">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblSupplierOrder">
+        <MappingFragment StoreEntitySet="tblSupplierOrder">
+          <ScalarProperty Name="SupplierFK" ColumnName="SupplierFK" />
+          <ScalarProperty Name="SupplierOrderId" ColumnName="SupplierOrderId" />
+          <ScalarProperty Name="PurchaseOrderNumber" ColumnName="PurchaseOrderNumber" />
+          <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="Completed" ColumnName="Completed" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Authorizer" ColumnName="Authorizer" />
+          <ScalarProperty Name="Frozen" ColumnName="Frozen" />
+          <ScalarProperty Name="Chill" ColumnName="Chill" />
+          <ScalarProperty Name="Condition" ColumnName="Condition" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="SupplierSign" ColumnName="SupplierSign" />
+          <ScalarProperty Name="AuthorizerSign" ColumnName="AuthorizerSign" />
+          <ScalarProperty Name="CompletedDate" ColumnName="CompletedDate" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="UrgentReport" ColumnName="UrgentReport" />
+          <ScalarProperty Name="WebUpload" ColumnName="WebUpload" />
+          <ScalarProperty Name="Saved" ColumnName="Saved" />
+          <ScalarProperty Name="StaffUserCode" ColumnName="StaffUserCode" />
+          <ScalarProperty Name="ManagerUserCode" ColumnName="ManagerUserCode" />
+          <ScalarProperty Name="SupplierTotalAmount" ColumnName="SupplierTotalAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSupplierOrderImages">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblSupplierOrderImage">
+        <MappingFragment StoreEntitySet="tblSupplierOrderImages">
+          <ScalarProperty Name="ImageId" ColumnName="ImageId" />
+          <ScalarProperty Name="SupplierOrderid" ColumnName="SupplierOrderid" />
+          <ScalarProperty Name="PurchaseOrderNumberFK" ColumnName="PurchaseOrderNumberFK" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSupplierOrderItems">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblSupplierOrderItem">
+        <MappingFragment StoreEntitySet="tblSupplierOrderItems">
+          <ScalarProperty Name="SupplierOrderItemId" ColumnName="SupplierOrderItemId" />
+          <ScalarProperty Name="PurchaseOrderNumberFK" ColumnName="PurchaseOrderNumberFK" />
+          <ScalarProperty Name="ProductFK" ColumnName="ProductFK" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Received" ColumnName="Received" />
+          <ScalarProperty Name="Cancelled" ColumnName="Cancelled" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="PoorQuality" ColumnName="PoorQuality" />
+          <ScalarProperty Name="QuantityUnder" ColumnName="QuantityUnder" />
+          <ScalarProperty Name="QuantityOver" ColumnName="QuantityOver" />
+          <ScalarProperty Name="TemperatureIssue" ColumnName="TemperatureIssue" />
+          <ScalarProperty Name="ExpirationIssue" ColumnName="ExpirationIssue" />
+          <ScalarProperty Name="Return" ColumnName="Return" />
+          <ScalarProperty Name="Checked" ColumnName="Checked" />
+          <ScalarProperty Name="SupplierAmount" ColumnName="SupplierAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTableOrders">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblTableOrder">
+        <MappingFragment StoreEntitySet="tblTableOrder">
+          <ScalarProperty Name="BarCodePrint" ColumnName="BarCodePrint" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TableId" ColumnName="TableId" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="CustomerCount" ColumnName="CustomerCount" />
+          <ScalarProperty Name="UniqueCode" ColumnName="UniqueCode" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateValidated" ColumnName="DateValidated" />
+          <ScalarProperty Name="NextOrderTime" ColumnName="NextOrderTime" />
+          <ScalarProperty Name="SignInCount" ColumnName="SignInCount" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="QRCodePrint" ColumnName="QRCodePrint" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTables">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblTable">
+        <MappingFragment StoreEntitySet="tblTables">
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="TableNumber" ColumnName="TableNumber" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="CurrentStatus" ColumnName="CurrentStatus" />
+          <ScalarProperty Name="Top" ColumnName="Top" />
+          <ScalarProperty Name="Left" ColumnName="Left" />
+          <ScalarProperty Name="OccupiedTime" ColumnName="OccupiedTime" />
+          <ScalarProperty Name="EditingOnTill" ColumnName="EditingOnTill" />
+          <ScalarProperty Name="PrinterFK" ColumnName="PrinterFK" />
+          <ScalarProperty Name="PastStatus" ColumnName="PastStatus" />
+          <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTableSections">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblTableSection">
+        <MappingFragment StoreEntitySet="tblTableSection">
+          <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+          <ScalarProperty Name="SectionName" ColumnName="SectionName" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTakeAwayOrderDeliveries">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblTakeAwayOrderDelivery">
+        <MappingFragment StoreEntitySet="tblTakeAwayOrderDelivery">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TakeAwayId" ColumnName="TakeAwayId" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="DeliveryStaffId" ColumnName="DeliveryStaffId" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="CollectedAt" ColumnName="CollectedAt" />
+          <ScalarProperty Name="DeliveredAt" ColumnName="DeliveredAt" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="AmountCollected" ColumnName="AmountCollected" />
+          <ScalarProperty Name="CollectedBy" ColumnName="CollectedBy" />
+          <ScalarProperty Name="AmountCollectedAt" ColumnName="AmountCollectedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTakeAwayOrders">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblTakeAwayOrder">
+        <MappingFragment StoreEntitySet="tblTakeAwayOrders">
+          <ScalarProperty Name="WebUpload" ColumnName="WebUpload" />
+          <ScalarProperty Name="bOffline" ColumnName="bOffline" />
+          <ScalarProperty Name="TakeAwayId" ColumnName="TakeAwayId" />
+          <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="CollectionTime" ColumnName="CollectionTime" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="HasPrinted" ColumnName="HasPrinted" />
+          <ScalarProperty Name="HasBeenCollected" ColumnName="HasBeenCollected" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="delInd" ColumnName="delInd" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="bTakeaway" ColumnName="bTakeaway" />
+          <ScalarProperty Name="bDelivery" ColumnName="bDelivery" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+          <ScalarProperty Name="HasBeenPrepared" ColumnName="HasBeenPrepared" />
+          <ScalarProperty Name="HasBeenDelivered" ColumnName="HasBeenDelivered" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTillPromotions">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblTillPromotion">
+        <MappingFragment StoreEntitySet="tblTillPromotions">
+          <ScalarProperty Name="PromotionId" ColumnName="PromotionId" />
+          <ScalarProperty Name="PromoId" ColumnName="PromoId" />
+          <ScalarProperty Name="Promotion" ColumnName="Promotion" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="PromoCode" ColumnName="PromoCode" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="VoucherValue" ColumnName="VoucherValue" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="MaxVouchers" ColumnName="MaxVouchers" />
+          <ScalarProperty Name="TillPromotion" ColumnName="TillPromotion" />
+          <ScalarProperty Name="Archived" ColumnName="Archived" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUsers">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblUser">
+        <MappingFragment StoreEntitySet="tblUser">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserLevelID" ColumnName="UserLevelID" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="ScanCode" ColumnName="ScanCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUserLevels">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblUserLevel">
+        <MappingFragment StoreEntitySet="tblUserLevel">
+          <ScalarProperty Name="UserLevelID" ColumnName="UserLevelID" />
+          <ScalarProperty Name="LevelDescription" ColumnName="LevelDescription" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblZCardSales">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblZCardSale">
+        <MappingFragment StoreEntitySet="tblZCardSale">
+          <ScalarProperty Name="ZID" ColumnName="ZID" />
+          <ScalarProperty Name="PCName" ColumnName="PCName" />
+          <ScalarProperty Name="ZDate" ColumnName="ZDate" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="CardSale" ColumnName="CardSale" />
+          <ScalarProperty Name="CardTip" ColumnName="CardTip" />
+          <ScalarProperty Name="AmexCardSale" ColumnName="AmexCardSale" />
+          <ScalarProperty Name="AmexCardTip" ColumnName="AmexCardTip" />
+          <ScalarProperty Name="TillCardSale" ColumnName="TillCardSale" />
+          <ScalarProperty Name="Difference" ColumnName="Difference" />
+          <ScalarProperty Name="Matched" ColumnName="Matched" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblZCashSales">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblZCashSale">
+        <MappingFragment StoreEntitySet="tblZCashSale">
+          <ScalarProperty Name="ZID" ColumnName="ZID" />
+          <ScalarProperty Name="PCName" ColumnName="PCName" />
+          <ScalarProperty Name="ZDate" ColumnName="ZDate" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Fiftypound" ColumnName="Fiftypound" />
+          <ScalarProperty Name="Twentypound" ColumnName="Twentypound" />
+          <ScalarProperty Name="Tenpound" ColumnName="Tenpound" />
+          <ScalarProperty Name="Fivepound" ColumnName="Fivepound" />
+          <ScalarProperty Name="Twopound" ColumnName="Twopound" />
+          <ScalarProperty Name="Onepound" ColumnName="Onepound" />
+          <ScalarProperty Name="Fiftypence" ColumnName="Fiftypence" />
+          <ScalarProperty Name="Twentypence" ColumnName="Twentypence" />
+          <ScalarProperty Name="Tenpence" ColumnName="Tenpence" />
+          <ScalarProperty Name="Fivepence" ColumnName="Fivepence" />
+          <ScalarProperty Name="Twopence" ColumnName="Twopence" />
+          <ScalarProperty Name="Onepence" ColumnName="Onepence" />
+          <ScalarProperty Name="CashTotal" ColumnName="CashTotal" />
+          <ScalarProperty Name="TillCashSale" ColumnName="TillCashSale" />
+          <ScalarProperty Name="Difference" ColumnName="Difference" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblZHistories">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblZHistory">
+        <MappingFragment StoreEntitySet="tblZHistory">
+          <ScalarProperty Name="ZID" ColumnName="ZID" />
+          <ScalarProperty Name="PCName" ColumnName="PCName" />
+          <ScalarProperty Name="ZDate" ColumnName="ZDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAppOptionRestrictions">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblAppOptionRestriction">
+        <MappingFragment StoreEntitySet="tblAppOptionRestriction">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AppOptionID" ColumnName="AppOptionID" />
+          <ScalarProperty Name="UserLevel" ColumnName="UserLevel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAppOptions">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblAppOption">
+        <MappingFragment StoreEntitySet="tblAppOptions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Activity" ColumnName="Activity" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAppUsers">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblAppUser">
+        <MappingFragment StoreEntitySet="tblAppUser">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="LoginDate" ColumnName="LoginDate" />
+          <ScalarProperty Name="LogoutDate" ColumnName="LogoutDate" />
+          <ScalarProperty Name="TotalDrinks" ColumnName="TotalDrinks" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="DeviceType" ColumnName="DeviceType" />
+          <ScalarProperty Name="WebUpload" ColumnName="WebUpload" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCustomers">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblCustomer">
+        <MappingFragment StoreEntitySet="tblCustomer">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="DOA" ColumnName="DOA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCustomerOrders">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblCustomerOrder">
+        <MappingFragment StoreEntitySet="tblCustomerOrder">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCustomerWaitLists">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblCustomerWaitList">
+        <MappingFragment StoreEntitySet="tblCustomerWaitList">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateAllocated" ColumnName="DateAllocated" />
+          <ScalarProperty Name="AdCount" ColumnName="AdCount" />
+          <ScalarProperty Name="KdCount" ColumnName="KdCount" />
+          <ScalarProperty Name="JnCount" ColumnName="JnCount" />
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="AllocUserID" ColumnName="AllocUserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDrinksTargets">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblDrinksTarget">
+        <MappingFragment StoreEntitySet="tblDrinksTarget">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="PCName" ColumnName="PCName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="TargetName" ColumnName="TargetName" />
+          <ScalarProperty Name="TargetDate" ColumnName="TargetDate" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductTarget" ColumnName="ProductTarget" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="WebUpload" ColumnName="WebUpload" />
+          <ScalarProperty Name="ProductTypeTargetID" ColumnName="ProductTypeTargetID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblGiftVouchers">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblGiftVoucher">
+        <MappingFragment StoreEntitySet="tblGiftVouchers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RestaurantID" ColumnName="RestaurantID" />
+          <ScalarProperty Name="DateRedeemed" ColumnName="DateRedeemed" />
+          <ScalarProperty Name="TableNumber" ColumnName="TableNumber" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="WebUpload" ColumnName="WebUpload" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblHandheldDevices">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblHandheldDevice">
+        <MappingFragment StoreEntitySet="tblHandheldDevices">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DeviceID" ColumnName="DeviceID" />
+          <ScalarProperty Name="MessagingToken" ColumnName="MessagingToken" />
+          <ScalarProperty Name="Connected" ColumnName="Connected" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblJoinedTables">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblJoinedTable">
+        <MappingFragment StoreEntitySet="tblJoinedTables">
+          <ScalarProperty Name="JoinedTablesId" ColumnName="JoinedTablesId" />
+          <ScalarProperty Name="OrderGuid" ColumnName="OrderGuid" />
+          <ScalarProperty Name="TableId" ColumnName="TableId" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateReleased" ColumnName="DateReleased" />
+          <ScalarProperty Name="ReleasedBy" ColumnName="ReleasedBy" />
+          <ScalarProperty Name="Released" ColumnName="Released" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOrderPartOptionTemps">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblOrderPartOptionTemp">
+        <MappingFragment StoreEntitySet="tblOrderPartOptionTemp">
+          <ScalarProperty Name="OrderPartOptionID" ColumnName="OrderPartOptionID" />
+          <ScalarProperty Name="OrderPartId" ColumnName="OrderPartId" />
+          <ScalarProperty Name="ProductOptionID" ColumnName="ProductOptionID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="bComitted" ColumnName="bComitted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOrderPartTemps">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblOrderPartTemp">
+        <MappingFragment StoreEntitySet="tblOrderPartTemp">
+          <ScalarProperty Name="OrderPartID" ColumnName="OrderPartID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="bComitted" ColumnName="bComitted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProductsTargets">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblProductsTarget">
+        <MappingFragment StoreEntitySet="tblProductsTarget">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="PCName" ColumnName="PCName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
+          <ScalarProperty Name="ProductTarget" ColumnName="ProductTarget" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="WebUpload" ColumnName="WebUpload" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProductTypeTargets">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblProductTypeTarget">
+        <MappingFragment StoreEntitySet="tblProductTypeTarget">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
+          <ScalarProperty Name="TargetDate" ColumnName="TargetDate" />
+          <ScalarProperty Name="Target" ColumnName="Target" />
+          <ScalarProperty Name="ProductsLinked" ColumnName="ProductsLinked" />
+          <ScalarProperty Name="WebUpload" ColumnName="WebUpload" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTablesCleanings">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblTablesCleaning">
+        <MappingFragment StoreEntitySet="tblTablesCleaning">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="BillingTime" ColumnName="BillingTime" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="AvailableTime" ColumnName="AvailableTime" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUnclaimedProducts">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblUnclaimedProduct">
+        <MappingFragment StoreEntitySet="tblUnclaimedProducts">
+          <ScalarProperty Name="UnclaimedProductId" ColumnName="UnclaimedProductId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="TableId" ColumnName="TableId" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="WebUpload" ColumnName="WebUpload" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUserSwipeHistories">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblUserSwipeHistory">
+        <MappingFragment StoreEntitySet="tblUserSwipeHistory">
+          <ScalarProperty Name="SwipeID" ColumnName="SwipeID" />
+          <ScalarProperty Name="UserFK" ColumnName="UserFK" />
+          <ScalarProperty Name="TillName" ColumnName="TillName" />
+          <ScalarProperty Name="ScanCode" ColumnName="ScanCode" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblWashroomChecks">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblWashroomCheck">
+        <MappingFragment StoreEntitySet="tblWashroomCheck">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="WebUpload" ColumnName="WebUpload" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vAllIndexes">
+      <EntityTypeMapping TypeName="ChineseTillModel.vAllIndex">
+        <MappingFragment StoreEntitySet="vAllIndexes">
+          <ScalarProperty Name="TABLE_NAME" ColumnName="TABLE_NAME" />
+          <ScalarProperty Name="INDEX_NAME" ColumnName="INDEX_NAME" />
+          <ScalarProperty Name="COLUMN_LIST" ColumnName="COLUMN_LIST" />
+          <ScalarProperty Name="IS_CLUSTERED" ColumnName="IS_CLUSTERED" />
+          <ScalarProperty Name="IS_UNIQUE" ColumnName="IS_UNIQUE" />
+          <ScalarProperty Name="FILE_GROUP" ColumnName="FILE_GROUP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwANProducts">
+      <EntityTypeMapping TypeName="ChineseTillModel.vwANProduct">
+        <MappingFragment StoreEntitySet="vwANProducts">
+          <ScalarProperty Name="ProductGroupID" ColumnName="ProductGroupID" />
+          <ScalarProperty Name="Groupname" ColumnName="Groupname" />
+          <ScalarProperty Name="ParentGroupID" ColumnName="ParentGroupID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CustomisePrice" ColumnName="CustomisePrice" />
+          <ScalarProperty Name="ProductAvailable" ColumnName="ProductAvailable" />
+          <ScalarProperty Name="HasLinkedProducts" ColumnName="HasLinkedProducts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwANProducts1">
+      <EntityTypeMapping TypeName="ChineseTillModel.vwANProducts1">
+        <MappingFragment StoreEntitySet="vwANProducts1">
+          <ScalarProperty Name="EnglishName" ColumnName="EnglishName" />
+          <ScalarProperty Name="ProductGroupID" ColumnName="ProductGroupID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CustomisePrice" ColumnName="CustomisePrice" />
+          <ScalarProperty Name="ProductAvailable" ColumnName="ProductAvailable" />
+          <ScalarProperty Name="HasLinkedProducts" ColumnName="HasLinkedProducts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwANTableStatus">
+      <EntityTypeMapping TypeName="ChineseTillModel.vwANTableStatu">
+        <MappingFragment StoreEntitySet="vwANTableStatus">
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="CurrentStatus" ColumnName="CurrentStatus" />
+          <ScalarProperty Name="Top" ColumnName="Top" />
+          <ScalarProperty Name="Left" ColumnName="Left" />
+          <ScalarProperty Name="OccupiedTime" ColumnName="OccupiedTime" />
+          <ScalarProperty Name="CurrentTotal" ColumnName="CurrentTotal" />
+          <ScalarProperty Name="AdCount" ColumnName="AdCount" />
+          <ScalarProperty Name="KdCount" ColumnName="KdCount" />
+          <ScalarProperty Name="JnCount" ColumnName="JnCount" />
+          <ScalarProperty Name="TableNumber" ColumnName="TableNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwANTableStatus1">
+      <EntityTypeMapping TypeName="ChineseTillModel.vwANTableStatus1">
+        <MappingFragment StoreEntitySet="vwANTableStatus1">
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="CurrentStatus" ColumnName="CurrentStatus" />
+          <ScalarProperty Name="Top" ColumnName="Top" />
+          <ScalarProperty Name="Left" ColumnName="Left" />
+          <ScalarProperty Name="OccupiedTime" ColumnName="OccupiedTime" />
+          <ScalarProperty Name="UniqueCode" ColumnName="UniqueCode" />
+          <ScalarProperty Name="CurrentTotal" ColumnName="CurrentTotal" />
+          <ScalarProperty Name="AdCount" ColumnName="AdCount" />
+          <ScalarProperty Name="KdCount" ColumnName="KdCount" />
+          <ScalarProperty Name="JnCount" ColumnName="JnCount" />
+          <ScalarProperty Name="ServiceRequired" ColumnName="ServiceRequired" />
+          <ScalarProperty Name="TableNumber" ColumnName="TableNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwANTableStatus2">
+      <EntityTypeMapping TypeName="ChineseTillModel.vwANTableStatus2">
+        <MappingFragment StoreEntitySet="vwANTableStatus2">
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="CurrentStatus" ColumnName="CurrentStatus" />
+          <ScalarProperty Name="Top" ColumnName="Top" />
+          <ScalarProperty Name="Left" ColumnName="Left" />
+          <ScalarProperty Name="OccupiedTime" ColumnName="OccupiedTime" />
+          <ScalarProperty Name="UniqueCode" ColumnName="UniqueCode" />
+          <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+          <ScalarProperty Name="CurrentTotal" ColumnName="CurrentTotal" />
+          <ScalarProperty Name="AdCount" ColumnName="AdCount" />
+          <ScalarProperty Name="KdCount" ColumnName="KdCount" />
+          <ScalarProperty Name="JnCount" ColumnName="JnCount" />
+          <ScalarProperty Name="ServiceRequired" ColumnName="ServiceRequired" />
+          <ScalarProperty Name="TableNumber" ColumnName="TableNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwDetailOrderItems">
+      <EntityTypeMapping TypeName="ChineseTillModel.vwDetailOrderItem">
+        <MappingFragment StoreEntitySet="vwDetailOrderItems">
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="OrderPartID" ColumnName="OrderPartID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwItemsModifiedAfterBills">
+      <EntityTypeMapping TypeName="ChineseTillModel.vwItemsModifiedAfterBill">
+        <MappingFragment StoreEntitySet="vwItemsModifiedAfterBill">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Removed" ColumnName="Removed" />
+          <ScalarProperty Name="Added" ColumnName="Added" />
+          <ScalarProperty Name="PCName" ColumnName="PCName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="OrderFK" ColumnName="OrderFK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwItemsOnOrders">
+      <EntityTypeMapping TypeName="ChineseTillModel.vwItemsOnOrder">
+        <MappingFragment StoreEntitySet="vwItemsOnOrder">
+          <ScalarProperty Name="productid" ColumnName="productid" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwOrderItems">
+      <EntityTypeMapping TypeName="ChineseTillModel.vwOrderItem">
+        <MappingFragment StoreEntitySet="vwOrderItems">
+          <ScalarProperty Name="OrderPartID" ColumnName="OrderPartID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwProducts">
+      <EntityTypeMapping TypeName="ChineseTillModel.vwProduct">
+        <MappingFragment StoreEntitySet="vwProducts">
+          <ScalarProperty Name="EnglishName" ColumnName="EnglishName" />
+          <ScalarProperty Name="ProductGroupID" ColumnName="ProductGroupID" />
+          <ScalarProperty Name="Groupname" ColumnName="Groupname" />
+          <ScalarProperty Name="ParentGroupID" ColumnName="ParentGroupID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="CustomisePrice" ColumnName="CustomisePrice" />
+          <ScalarProperty Name="Forecolour" ColumnName="Forecolour" />
+          <ScalarProperty Name="Backcolour" ColumnName="Backcolour" />
+          <ScalarProperty Name="FoodRefil" ColumnName="FoodRefil" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="IsTakeaway" ColumnName="IsTakeaway" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="ProductAvailable" ColumnName="ProductAvailable" />
+          <ScalarProperty Name="HasLinkedProducts" ColumnName="HasLinkedProducts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwProductsOnOrders">
+      <EntityTypeMapping TypeName="ChineseTillModel.vwProductsOnOrder">
+        <MappingFragment StoreEntitySet="vwProductsOnOrder">
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwProductsOnOrder2">
+      <EntityTypeMapping TypeName="ChineseTillModel.vwProductsOnOrder2">
+        <MappingFragment StoreEntitySet="vwProductsOnOrder2">
+          <ScalarProperty Name="EnglishName" ColumnName="EnglishName" />
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="ProductOptions" ColumnName="ProductOptions" />
+          <ScalarProperty Name="ProductOptionIds" ColumnName="ProductOptionIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwProductsOnOrder3">
+      <EntityTypeMapping TypeName="ChineseTillModel.vwProductsOnOrder3">
+        <MappingFragment StoreEntitySet="vwProductsOnOrder3">
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductGroupID" ColumnName="ProductGroupID" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="BoxGroupId" ColumnName="BoxGroupId" />
+          <ScalarProperty Name="ProductOptions" ColumnName="ProductOptions" />
+          <ScalarProperty Name="ProductOptionIds" ColumnName="ProductOptionIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwProductsOnOrder4">
+      <EntityTypeMapping TypeName="ChineseTillModel.vwProductsOnOrder4">
+        <MappingFragment StoreEntitySet="vwProductsOnOrder4">
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="ProductOptions" ColumnName="ProductOptions" />
+          <ScalarProperty Name="ProductOptionIds" ColumnName="ProductOptionIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwProductsOnOrderTemps">
+      <EntityTypeMapping TypeName="ChineseTillModel.vwProductsOnOrderTemp">
+        <MappingFragment StoreEntitySet="vwProductsOnOrderTemp">
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="bComitted" ColumnName="bComitted" />
+          <ScalarProperty Name="HasLinkedProducts" ColumnName="HasLinkedProducts" />
+          <ScalarProperty Name="ProductOptions" ColumnName="ProductOptions" />
+          <ScalarProperty Name="ProductOptionIds" ColumnName="ProductOptionIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwProductsOptionsOnOrderTemps">
+      <EntityTypeMapping TypeName="ChineseTillModel.vwProductsOptionsOnOrderTemp">
+        <MappingFragment StoreEntitySet="vwProductsOptionsOnOrderTemp">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="bComitted" ColumnName="bComitted" />
+          <ScalarProperty Name="OrderPartId" ColumnName="OrderPartId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwReservations">
+      <EntityTypeMapping TypeName="ChineseTillModel.vwReservation">
+        <MappingFragment StoreEntitySet="vwReservations">
+          <ScalarProperty Name="ReservationID" ColumnName="ReservationID" />
+          <ScalarProperty Name="Reservation" ColumnName="Reservation" />
+          <ScalarProperty Name="ReservationDate" ColumnName="ReservationDate" />
+          <ScalarProperty Name="ReservationTime" ColumnName="ReservationTime" />
+          <ScalarProperty Name="ReservationNotes" ColumnName="ReservationNotes" />
+          <ScalarProperty Name="NoOfGuests" ColumnName="NoOfGuests" />
+          <ScalarProperty Name="Tables" ColumnName="Tables" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="OnLineReservation" ColumnName="OnLineReservation" />
+          <ScalarProperty Name="bDepositPaid" ColumnName="bDepositPaid" />
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwReservations1">
+      <EntityTypeMapping TypeName="ChineseTillModel.vwReservations1">
+        <MappingFragment StoreEntitySet="vwReservations1">
+          <ScalarProperty Name="ReservationID" ColumnName="ReservationID" />
+          <ScalarProperty Name="Reservation" ColumnName="Reservation" />
+          <ScalarProperty Name="ReservationDate" ColumnName="ReservationDate" />
+          <ScalarProperty Name="ReservationTime" ColumnName="ReservationTime" />
+          <ScalarProperty Name="ReservationNotes" ColumnName="ReservationNotes" />
+          <ScalarProperty Name="NoOfGuests" ColumnName="NoOfGuests" />
+          <ScalarProperty Name="Tables" ColumnName="Tables" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="OnLineReservation" ColumnName="OnLineReservation" />
+          <ScalarProperty Name="bDepositPaid" ColumnName="bDepositPaid" />
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+          <ScalarProperty Name="ReservationType" ColumnName="ReservationType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwTableStatus">
+      <EntityTypeMapping TypeName="ChineseTillModel.vwTableStatu">
+        <MappingFragment StoreEntitySet="vwTableStatus">
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="CurrentStatus" ColumnName="CurrentStatus" />
+          <ScalarProperty Name="Top" ColumnName="Top" />
+          <ScalarProperty Name="Left" ColumnName="Left" />
+          <ScalarProperty Name="OccupiedTime" ColumnName="OccupiedTime" />
+          <ScalarProperty Name="CurrentTotal" ColumnName="CurrentTotal" />
+          <ScalarProperty Name="TableNumber" ColumnName="TableNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwTableStatusForiPhones">
+      <EntityTypeMapping TypeName="ChineseTillModel.vwTableStatusForiPhone">
+        <MappingFragment StoreEntitySet="vwTableStatusForiPhone">
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="CurrentStatus" ColumnName="CurrentStatus" />
+          <ScalarProperty Name="Top" ColumnName="Top" />
+          <ScalarProperty Name="Left" ColumnName="Left" />
+          <ScalarProperty Name="OccupiedTime" ColumnName="OccupiedTime" />
+          <ScalarProperty Name="CurrentTotal" ColumnName="CurrentTotal" />
+          <ScalarProperty Name="TableNumber" ColumnName="TableNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GenerateRandomString" FunctionName="ChineseTillModel.Store.GenerateRandomString" />
+    <FunctionImportMapping FunctionImportName="GenerateTriggers" FunctionName="ChineseTillModel.Store.GenerateTriggers" />
+    <FunctionImportMapping FunctionImportName="usp_AN_AssignTable" FunctionName="ChineseTillModel.Store.usp_AN_AssignTable" />
+    <FunctionImportMapping FunctionImportName="usp_AN_AuthenticateUser" FunctionName="ChineseTillModel.Store.usp_AN_AuthenticateUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_AN_AuthenticateUser_Result">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserLevelID" ColumnName="UserLevelID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_AN_CheckTableOrder" FunctionName="ChineseTillModel.Store.usp_AN_CheckTableOrder">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_AN_CheckTableOrder_Result">
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="Paid" ColumnName="Paid" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+          <ScalarProperty Name="GrandTotal" ColumnName="GrandTotal" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="TabID" ColumnName="TabID" />
+          <ScalarProperty Name="TabName" ColumnName="TabName" />
+          <ScalarProperty Name="DatePaid" ColumnName="DatePaid" />
+          <ScalarProperty Name="TotalPaid" ColumnName="TotalPaid" />
+          <ScalarProperty Name="Change" ColumnName="Change" />
+          <ScalarProperty Name="BillPrinted" ColumnName="BillPrinted" />
+          <ScalarProperty Name="VATReceiptPrinted" ColumnName="VATReceiptPrinted" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="TakeAway" ColumnName="TakeAway" />
+          <ScalarProperty Name="TakeAwayName" ColumnName="TakeAwayName" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="WebUploadSuccessful" ColumnName="WebUploadSuccessful" />
+          <ScalarProperty Name="CustCount" ColumnName="CustCount" />
+          <ScalarProperty Name="PrevCust" ColumnName="PrevCust" />
+          <ScalarProperty Name="DrinksRep" ColumnName="DrinksRep" />
+          <ScalarProperty Name="CoffeeConfirm" ColumnName="CoffeeConfirm" />
+          <ScalarProperty Name="AdCount" ColumnName="AdCount" />
+          <ScalarProperty Name="KdCount" ColumnName="KdCount" />
+          <ScalarProperty Name="JnCount" ColumnName="JnCount" />
+          <ScalarProperty Name="SplitBill" ColumnName="SplitBill" />
+          <ScalarProperty Name="MovedFromOrderGUID" ColumnName="MovedFromOrderGUID" />
+          <ScalarProperty Name="TipAmount" ColumnName="TipAmount" />
+          <ScalarProperty Name="ServiceRequired" ColumnName="ServiceRequired" />
+          <ScalarProperty Name="DeliveryCharges" ColumnName="DeliveryCharges" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="ServiceChargeApplicable" ColumnName="ServiceChargeApplicable" />
+          <ScalarProperty Name="ServiceCharge" ColumnName="ServiceCharge" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_AN_EditWLCustomer" FunctionName="ChineseTillModel.Store.usp_AN_EditWLCustomer" />
+    <FunctionImportMapping FunctionImportName="usp_AN_FetchTables" FunctionName="ChineseTillModel.Store.usp_AN_FetchTables">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_AN_FetchTables_Result">
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="CurrentStatus" ColumnName="CurrentStatus" />
+          <ScalarProperty Name="Top" ColumnName="Top" />
+          <ScalarProperty Name="Left" ColumnName="Left" />
+          <ScalarProperty Name="OccupiedTime" ColumnName="OccupiedTime" />
+          <ScalarProperty Name="UniqueCode" ColumnName="UniqueCode" />
+          <ScalarProperty Name="CurrentTotal" ColumnName="CurrentTotal" />
+          <ScalarProperty Name="AdCount" ColumnName="AdCount" />
+          <ScalarProperty Name="KdCount" ColumnName="KdCount" />
+          <ScalarProperty Name="JnCount" ColumnName="JnCount" />
+          <ScalarProperty Name="ServiceRequired" ColumnName="ServiceRequired" />
+          <ScalarProperty Name="TableNumber" ColumnName="TableNumber" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_AN_FetchTablesV1" FunctionName="ChineseTillModel.Store.usp_AN_FetchTablesV1">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_AN_FetchTablesV1_Result">
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="CurrentStatus" ColumnName="CurrentStatus" />
+          <ScalarProperty Name="Top" ColumnName="Top" />
+          <ScalarProperty Name="Left" ColumnName="Left" />
+          <ScalarProperty Name="OccupiedTime" ColumnName="OccupiedTime" />
+          <ScalarProperty Name="UniqueCode" ColumnName="UniqueCode" />
+          <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+          <ScalarProperty Name="CurrentTotal" ColumnName="CurrentTotal" />
+          <ScalarProperty Name="AdCount" ColumnName="AdCount" />
+          <ScalarProperty Name="KdCount" ColumnName="KdCount" />
+          <ScalarProperty Name="JnCount" ColumnName="JnCount" />
+          <ScalarProperty Name="ServiceRequired" ColumnName="ServiceRequired" />
+          <ScalarProperty Name="TableNumber" ColumnName="TableNumber" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_AN_FreeUpTable" FunctionName="ChineseTillModel.Store.usp_AN_FreeUpTable" />
+    <FunctionImportMapping FunctionImportName="usp_AN_GetCustomerDetails" FunctionName="ChineseTillModel.Store.usp_AN_GetCustomerDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_AN_GetCustomerDetails_Result">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="DOA" ColumnName="DOA" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_AN_GetHeadCounts" FunctionName="ChineseTillModel.Store.usp_AN_GetHeadCounts">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_AN_GetHeadCounts_Result">
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="HeadCount" ColumnName="HeadCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_AN_GetLatestNews" FunctionName="ChineseTillModel.Store.usp_AN_GetLatestNews" />
+    <FunctionImportMapping FunctionImportName="usp_AN_GetParentTableNumber" FunctionName="ChineseTillModel.Store.usp_AN_GetParentTableNumber" />
+    <FunctionImportMapping FunctionImportName="usp_AN_GetPendingRefillProducts" FunctionName="ChineseTillModel.Store.usp_AN_GetPendingRefillProducts">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_AN_GetPendingRefillProducts_Result">
+          <ScalarProperty Name="ProductRefillID" ColumnName="ProductRefillID" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="ProductSize" ColumnName="ProductSize" />
+          <ScalarProperty Name="UserFK" ColumnName="UserFK" />
+          <ScalarProperty Name="PCName" ColumnName="PCName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="DateRefill" ColumnName="DateRefill" />
+          <ScalarProperty Name="ProductQty" ColumnName="ProductQty" />
+          <ScalarProperty Name="WebUpload" ColumnName="WebUpload" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_AN_GetProductGroup" FunctionName="ChineseTillModel.Store.usp_AN_GetProductGroup">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_AN_GetProductGroup_Result">
+          <ScalarProperty Name="ProductGroupID" ColumnName="ProductGroupID" />
+          <ScalarProperty Name="Groupname" ColumnName="Groupname" />
+          <ScalarProperty Name="ParentGroupID" ColumnName="ParentGroupID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="bOnsite" ColumnName="bOnsite" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_AN_GetProductLinker" FunctionName="ChineseTillModel.Store.usp_AN_GetProductLinker">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_AN_GetProductLinker_Result">
+          <ScalarProperty Name="LinkID" ColumnName="LinkID" />
+          <ScalarProperty Name="PrimaryProductID" ColumnName="PrimaryProductID" />
+          <ScalarProperty Name="SecondaryProductID" ColumnName="SecondaryProductID" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_AN_GetProducts" FunctionName="ChineseTillModel.Store.usp_AN_GetProducts">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_AN_GetProducts_Result">
+          <ScalarProperty Name="ProductGroupID" ColumnName="ProductGroupID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CustomisePrice" ColumnName="CustomisePrice" />
+          <ScalarProperty Name="ProductAvailable" ColumnName="ProductAvailable" />
+          <ScalarProperty Name="HasLinkedProducts" ColumnName="HasLinkedProducts" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_AN_GetProductsTarget" FunctionName="ChineseTillModel.Store.usp_AN_GetProductsTarget">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_AN_GetProductsTarget_Result">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TypeDescription" ColumnName="TypeDescription" />
+          <ScalarProperty Name="Target" ColumnName="Target" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_AN_GetStockOrderData" FunctionName="ChineseTillModel.Store.usp_AN_GetStockOrderData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_AN_GetStockOrderData_Result">
+          <ScalarProperty Name="PurchaseOrderNumber" ColumnName="PurchaseOrderNumber" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+          <ScalarProperty Name="RequiredBy" ColumnName="RequiredBy" />
+          <ScalarProperty Name="RestaurantID" ColumnName="RestaurantID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_AN_GetStockOrderItemsData" FunctionName="ChineseTillModel.Store.usp_AN_GetStockOrderItemsData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_AN_GetStockOrderItemsData_Result">
+          <ScalarProperty Name="TemplateFK" ColumnName="TemplateFK" />
+          <ScalarProperty Name="ProductFK" ColumnName="ProductFK" />
+          <ScalarProperty Name="delInd" ColumnName="delInd" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="ItemTotal" ColumnName="ItemTotal" />
+          <ScalarProperty Name="MaxQuantity" ColumnName="MaxQuantity" />
+          <ScalarProperty Name="Counted" ColumnName="Counted" />
+          <ScalarProperty Name="StockQuantity" ColumnName="StockQuantity" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_AN_GetTableOrder" FunctionName="ChineseTillModel.Store.usp_AN_GetTableOrder">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_AN_GetTableOrder_Result">
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="CustCount" ColumnName="CustCount" />
+          <ScalarProperty Name="AdCount" ColumnName="AdCount" />
+          <ScalarProperty Name="KdCount" ColumnName="KdCount" />
+          <ScalarProperty Name="JnCount" ColumnName="JnCount" />
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="TableNumber" ColumnName="TableNumber" />
+          <ScalarProperty Name="OccupiedTime" ColumnName="OccupiedTime" />
+          <ScalarProperty Name="OrderPartID" ColumnName="OrderPartID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateServed" ColumnName="DateServed" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="RedemptionPoints" ColumnName="RedemptionPoints" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_AN_GetUserOrders" FunctionName="ChineseTillModel.Store.usp_AN_GetUserOrders">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_AN_GetUserOrders_Result">
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="CustCount" ColumnName="CustCount" />
+          <ScalarProperty Name="AdCount" ColumnName="AdCount" />
+          <ScalarProperty Name="KdCount" ColumnName="KdCount" />
+          <ScalarProperty Name="JnCount" ColumnName="JnCount" />
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="TableNumber" ColumnName="TableNumber" />
+          <ScalarProperty Name="OccupiedTime" ColumnName="OccupiedTime" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateServed" ColumnName="DateServed" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_AN_GetWaitListDetails" FunctionName="ChineseTillModel.Store.usp_AN_GetWaitListDetails" />
+    <FunctionImportMapping FunctionImportName="usp_AN_InsertCustomer" FunctionName="ChineseTillModel.Store.usp_AN_InsertCustomer" />
+    <FunctionImportMapping FunctionImportName="usp_AN_InsertOrder" FunctionName="ChineseTillModel.Store.usp_AN_InsertOrder" />
+    <FunctionImportMapping FunctionImportName="usp_AN_InsertOrder_V1" FunctionName="ChineseTillModel.Store.usp_AN_InsertOrder_V1" />
+    <FunctionImportMapping FunctionImportName="usp_AN_InsertOrderPart" FunctionName="ChineseTillModel.Store.usp_AN_InsertOrderPart" />
+    <FunctionImportMapping FunctionImportName="usp_AN_InsertOrderPartV2" FunctionName="ChineseTillModel.Store.usp_AN_InsertOrderPartV2" />
+    <FunctionImportMapping FunctionImportName="usp_AN_InsertPrintQueue" FunctionName="ChineseTillModel.Store.usp_AN_InsertPrintQueue" />
+    <FunctionImportMapping FunctionImportName="usp_AN_InsertProductWastage" FunctionName="ChineseTillModel.Store.usp_AN_InsertProductWastage" />
+    <FunctionImportMapping FunctionImportName="usp_AN_InsertRefillProduct" FunctionName="ChineseTillModel.Store.usp_AN_InsertRefillProduct" />
+    <FunctionImportMapping FunctionImportName="usp_AN_LinkTable" FunctionName="ChineseTillModel.Store.usp_AN_LinkTable" />
+    <FunctionImportMapping FunctionImportName="usp_AN_LogoutUser" FunctionName="ChineseTillModel.Store.usp_AN_LogoutUser" />
+    <FunctionImportMapping FunctionImportName="usp_AN_ReleaseTable" FunctionName="ChineseTillModel.Store.usp_AN_ReleaseTable" />
+    <FunctionImportMapping FunctionImportName="usp_AN_RequestBill" FunctionName="ChineseTillModel.Store.usp_AN_RequestBill" />
+    <FunctionImportMapping FunctionImportName="usp_AN_RevertAllocation" FunctionName="ChineseTillModel.Store.usp_AN_RevertAllocation" />
+    <FunctionImportMapping FunctionImportName="usp_AN_RevertUnAllocation" FunctionName="ChineseTillModel.Store.usp_AN_RevertUnAllocation" />
+    <FunctionImportMapping FunctionImportName="usp_AN_SetTableCleaning" FunctionName="ChineseTillModel.Store.usp_AN_SetTableCleaning" />
+    <FunctionImportMapping FunctionImportName="usp_AN_SetWLUnAllocated" FunctionName="ChineseTillModel.Store.usp_AN_SetWLUnAllocated" />
+    <FunctionImportMapping FunctionImportName="usp_AN_UpdateAllProductStatus" FunctionName="ChineseTillModel.Store.usp_AN_UpdateAllProductStatus" />
+    <FunctionImportMapping FunctionImportName="usp_AN_UpdateHeadCount" FunctionName="ChineseTillModel.Store.usp_AN_UpdateHeadCount" />
+    <FunctionImportMapping FunctionImportName="usp_AN_UpdateJoinedTables" FunctionName="ChineseTillModel.Store.usp_AN_UpdateJoinedTables" />
+    <FunctionImportMapping FunctionImportName="usp_AN_UpdateProductStatus" FunctionName="ChineseTillModel.Store.usp_AN_UpdateProductStatus" />
+    <FunctionImportMapping FunctionImportName="usp_AN_UpdateRefillProduct" FunctionName="ChineseTillModel.Store.usp_AN_UpdateRefillProduct" />
+    <FunctionImportMapping FunctionImportName="usp_AN_UpdateStockOrderSend" FunctionName="ChineseTillModel.Store.usp_AN_UpdateStockOrderSend" />
+    <FunctionImportMapping FunctionImportName="usp_AN_UpdateWashroomCheck" FunctionName="ChineseTillModel.Store.usp_AN_UpdateWashroomCheck" />
+    <FunctionImportMapping FunctionImportName="usp_CP_CreateNewTillUser" FunctionName="ChineseTillModel.Store.usp_CP_CreateNewTillUser" />
+    <FunctionImportMapping FunctionImportName="usp_CP_CreateUserCode" FunctionName="ChineseTillModel.Store.usp_CP_CreateUserCode" />
+    <FunctionImportMapping FunctionImportName="usp_DBMAINT_ArchiveData" FunctionName="ChineseTillModel.Store.usp_DBMAINT_ArchiveData" />
+    <FunctionImportMapping FunctionImportName="usp_DBMAINT_TableSizes" FunctionName="ChineseTillModel.Store.usp_DBMAINT_TableSizes">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_DBMAINT_TableSizes_Result">
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="indexName" ColumnName="indexName" />
+          <ScalarProperty Name="Rows" ColumnName="Rows" />
+          <ScalarProperty Name="TotalPages" ColumnName="TotalPages" />
+          <ScalarProperty Name="UsedPages" ColumnName="UsedPages" />
+          <ScalarProperty Name="DataPages" ColumnName="DataPages" />
+          <ScalarProperty Name="TotalSpaceMB" ColumnName="TotalSpaceMB" />
+          <ScalarProperty Name="UsedSpaceMB" ColumnName="UsedSpaceMB" />
+          <ScalarProperty Name="DataSpaceMB" ColumnName="DataSpaceMB" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ExportProducts" FunctionName="ChineseTillModel.Store.usp_ExportProducts">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_ExportProducts_Result">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductGroupID" ColumnName="ProductGroupID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="CustomisePrice" ColumnName="CustomisePrice" />
+          <ScalarProperty Name="Forecolour" ColumnName="Forecolour" />
+          <ScalarProperty Name="Backcolour" ColumnName="Backcolour" />
+          <ScalarProperty Name="FoodRefil" ColumnName="FoodRefil" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="IsTakeaway" ColumnName="IsTakeaway" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="FridgeQty" ColumnName="FridgeQty" />
+          <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
+          <ScalarProperty Name="IsFridgeItem" ColumnName="IsFridgeItem" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_Messenger_AddPrinter" FunctionName="ChineseTillModel.Store.usp_Messenger_AddPrinter" />
+    <FunctionImportMapping FunctionImportName="usp_Messenger_ClearPrinters" FunctionName="ChineseTillModel.Store.usp_Messenger_ClearPrinters" />
+    <FunctionImportMapping FunctionImportName="usp_Messenger_GetLocationForPrinters" FunctionName="ChineseTillModel.Store.usp_Messenger_GetLocationForPrinters" />
+    <FunctionImportMapping FunctionImportName="usp_MF_AddNewRefund" FunctionName="ChineseTillModel.Store.usp_MF_AddNewRefund" />
+    <FunctionImportMapping FunctionImportName="usp_MF_AddReservation" FunctionName="ChineseTillModel.Store.usp_MF_AddReservation" />
+    <FunctionImportMapping FunctionImportName="usp_MF_AddReservation_V2" FunctionName="ChineseTillModel.Store.usp_MF_AddReservation_V2" />
+    <FunctionImportMapping FunctionImportName="usp_MF_AddReservation_V3" FunctionName="ChineseTillModel.Store.usp_MF_AddReservation_V3" />
+    <FunctionImportMapping FunctionImportName="usp_MF_AddReservationAdvancedBooking" FunctionName="ChineseTillModel.Store.usp_MF_AddReservationAdvancedBooking" />
+    <FunctionImportMapping FunctionImportName="usp_MF_AddReservationMaxPer15Min" FunctionName="ChineseTillModel.Store.usp_MF_AddReservationMaxPer15Min" />
+    <FunctionImportMapping FunctionImportName="usp_MF_AddReservationName" FunctionName="ChineseTillModel.Store.usp_MF_AddReservationName" />
+    <FunctionImportMapping FunctionImportName="usp_MF_CreateReservationName" FunctionName="ChineseTillModel.Store.usp_MF_CreateReservationName" />
+    <FunctionImportMapping FunctionImportName="usp_MF_DeleteTakeAwayOrder" FunctionName="ChineseTillModel.Store.usp_MF_DeleteTakeAwayOrder" />
+    <FunctionImportMapping FunctionImportName="usp_MF_GetAvailableReservationTimes" FunctionName="ChineseTillModel.Store.usp_MF_GetAvailableReservationTimes" />
+    <FunctionImportMapping FunctionImportName="usp_MF_GetChangedBarInvoice" FunctionName="ChineseTillModel.Store.usp_MF_GetChangedBarInvoice">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_MF_GetChangedBarInvoice_Result">
+          <ScalarProperty Name="OrderPartId" ColumnName="OrderPartId" />
+          <ScalarProperty Name="productId" ColumnName="productId" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ItemTotal" ColumnName="ItemTotal" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_MF_GetChangedBarInvoiceItem" FunctionName="ChineseTillModel.Store.usp_MF_GetChangedBarInvoiceItem">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_MF_GetChangedBarInvoiceItem_Result">
+          <ScalarProperty Name="BarInvoiceItemID" ColumnName="BarInvoiceItemID" />
+          <ScalarProperty Name="BarInvoiceFK" ColumnName="BarInvoiceFK" />
+          <ScalarProperty Name="ProductFK" ColumnName="ProductFK" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="ProductDesc" ColumnName="ProductDesc" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ItemTotal" ColumnName="ItemTotal" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_MF_GetChangedOrderParts" FunctionName="ChineseTillModel.Store.usp_MF_GetChangedOrderParts">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_MF_GetChangedOrderParts_Result">
+          <ScalarProperty Name="OrderPartId" ColumnName="OrderPartId" />
+          <ScalarProperty Name="productId" ColumnName="productId" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ItemTotal" ColumnName="ItemTotal" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_MF_GetChangedOrderPayments" FunctionName="ChineseTillModel.Store.usp_MF_GetChangedOrderPayments">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_MF_GetChangedOrderPayments_Result">
+          <ScalarProperty Name="PaymentGUID" ColumnName="PaymentGUID" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+          <ScalarProperty Name="PaymentValue" ColumnName="PaymentValue" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="PCName" ColumnName="PCName" />
+          <ScalarProperty Name="Change" ColumnName="Change" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="TipAmount" ColumnName="TipAmount" />
+          <ScalarProperty Name="DeliveryCharges" ColumnName="DeliveryCharges" />
+          <ScalarProperty Name="ServiceCharge" ColumnName="ServiceCharge" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_MF_GetChangedOrders" FunctionName="ChineseTillModel.Store.usp_MF_GetChangedOrders">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_MF_GetChangedOrders_Result">
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="Paid" ColumnName="Paid" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+          <ScalarProperty Name="GrandTotal" ColumnName="GrandTotal" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="TabID" ColumnName="TabID" />
+          <ScalarProperty Name="TabName" ColumnName="TabName" />
+          <ScalarProperty Name="DatePaid" ColumnName="DatePaid" />
+          <ScalarProperty Name="TotalPaid" ColumnName="TotalPaid" />
+          <ScalarProperty Name="Change" ColumnName="Change" />
+          <ScalarProperty Name="BillPrinted" ColumnName="BillPrinted" />
+          <ScalarProperty Name="VATReceiptPrinted" ColumnName="VATReceiptPrinted" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="TakeAway" ColumnName="TakeAway" />
+          <ScalarProperty Name="TakeAwayName" ColumnName="TakeAwayName" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="WebUploadSuccessful" ColumnName="WebUploadSuccessful" />
+          <ScalarProperty Name="CustCount" ColumnName="CustCount" />
+          <ScalarProperty Name="PrevCust" ColumnName="PrevCust" />
+          <ScalarProperty Name="DrinksRep" ColumnName="DrinksRep" />
+          <ScalarProperty Name="CoffeeConfirm" ColumnName="CoffeeConfirm" />
+          <ScalarProperty Name="AdCount" ColumnName="AdCount" />
+          <ScalarProperty Name="KdCount" ColumnName="KdCount" />
+          <ScalarProperty Name="JnCount" ColumnName="JnCount" />
+          <ScalarProperty Name="SplitBill" ColumnName="SplitBill" />
+          <ScalarProperty Name="MovedFromOrderGUID" ColumnName="MovedFromOrderGUID" />
+          <ScalarProperty Name="TipAmount" ColumnName="TipAmount" />
+          <ScalarProperty Name="ServiceRequired" ColumnName="ServiceRequired" />
+          <ScalarProperty Name="DeliveryCharges" ColumnName="DeliveryCharges" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="ServiceChargeApplicable" ColumnName="ServiceChargeApplicable" />
+          <ScalarProperty Name="ServiceCharge" ColumnName="ServiceCharge" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_MF_GetChangedOrdersAdjustmentAfterBill" FunctionName="ChineseTillModel.Store.usp_MF_GetChangedOrdersAdjustmentAfterBill">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_MF_GetChangedOrdersAdjustmentAfterBill_Result">
+          <ScalarProperty Name="AdjustmentID" ColumnName="AdjustmentID" />
+          <ScalarProperty Name="ProductFK" ColumnName="ProductFK" />
+          <ScalarProperty Name="UserFK" ColumnName="UserFK" />
+          <ScalarProperty Name="Removed" ColumnName="Removed" />
+          <ScalarProperty Name="Added" ColumnName="Added" />
+          <ScalarProperty Name="PCName" ColumnName="PCName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_MF_GetLinkedProducts" FunctionName="ChineseTillModel.Store.usp_MF_GetLinkedProducts" />
+    <FunctionImportMapping FunctionImportName="usp_MF_GetPrintTakeAwayOrder" FunctionName="ChineseTillModel.Store.usp_MF_GetPrintTakeAwayOrder" />
+    <FunctionImportMapping FunctionImportName="usp_MF_GetReservationAdvancedBooking" FunctionName="ChineseTillModel.Store.usp_MF_GetReservationAdvancedBooking" />
+    <FunctionImportMapping FunctionImportName="usp_MF_GetReservationMaxPer15Min" FunctionName="ChineseTillModel.Store.usp_MF_GetReservationMaxPer15Min" />
+    <FunctionImportMapping FunctionImportName="usp_MF_GetReservationMaxPer15Min2" FunctionName="ChineseTillModel.Store.usp_MF_GetReservationMaxPer15Min2" />
+    <FunctionImportMapping FunctionImportName="usp_MF_GetTakeAwayId" FunctionName="ChineseTillModel.Store.usp_MF_GetTakeAwayId" />
+    <FunctionImportMapping FunctionImportName="usp_MF_GetTotalCardSale" FunctionName="ChineseTillModel.Store.usp_MF_GetTotalCardSale" />
+    <FunctionImportMapping FunctionImportName="usp_MF_GetTotalCashSale" FunctionName="ChineseTillModel.Store.usp_MF_GetTotalCashSale" />
+    <FunctionImportMapping FunctionImportName="usp_MF_InsertOnlineOrder" FunctionName="ChineseTillModel.Store.usp_MF_InsertOnlineOrder" />
+    <FunctionImportMapping FunctionImportName="usp_MF_ShowTakeAwayOrders" FunctionName="ChineseTillModel.Store.usp_MF_ShowTakeAwayOrders">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_MF_ShowTakeAwayOrders_Result">
+          <ScalarProperty Name="TakeAwayId" ColumnName="TakeAwayId" />
+          <ScalarProperty Name="CollectionTime" ColumnName="CollectionTime" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="theAddress" ColumnName="theAddress" />
+          <ScalarProperty Name="HasPrinted" ColumnName="HasPrinted" />
+          <ScalarProperty Name="HasBeenCollected" ColumnName="HasBeenCollected" />
+          <ScalarProperty Name="AddressId" ColumnName="AddressId" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="HasBeenPrepared" ColumnName="HasBeenPrepared" />
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+          <ScalarProperty Name="DeliveryType" ColumnName="DeliveryType" />
+          <ScalarProperty Name="Paid" ColumnName="Paid" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_MF_TakeAwayOrders" FunctionName="ChineseTillModel.Store.usp_MF_TakeAwayOrders" />
+    <FunctionImportMapping FunctionImportName="usp_MF_UpdateAddress" FunctionName="ChineseTillModel.Store.usp_MF_UpdateAddress" />
+    <FunctionImportMapping FunctionImportName="usp_MF_UpdateLinkedProducts" FunctionName="ChineseTillModel.Store.usp_MF_UpdateLinkedProducts" />
+    <FunctionImportMapping FunctionImportName="usp_MF_UpdateReservation" FunctionName="ChineseTillModel.Store.usp_MF_UpdateReservation" />
+    <FunctionImportMapping FunctionImportName="usp_MF_UpdateTakeAwayOrder" FunctionName="ChineseTillModel.Store.usp_MF_UpdateTakeAwayOrder" />
+    <FunctionImportMapping FunctionImportName="usp_MR_ChangeDailyPin" FunctionName="ChineseTillModel.Store.usp_MR_ChangeDailyPin" />
+    <FunctionImportMapping FunctionImportName="usp_MR_PrintOrder" FunctionName="ChineseTillModel.Store.usp_MR_PrintOrder" />
+    <FunctionImportMapping FunctionImportName="usp_MR_ProcessIPODOrder" FunctionName="ChineseTillModel.Store.usp_MR_ProcessIPODOrder" />
+    <FunctionImportMapping FunctionImportName="usp_MR_RecommendIndexes" FunctionName="ChineseTillModel.Store.usp_MR_RecommendIndexes" />
+    <FunctionImportMapping FunctionImportName="usp_NR_AddNewProductWithLinkedItems" FunctionName="ChineseTillModel.Store.usp_NR_AddNewProductWithLinkedItems" />
+    <FunctionImportMapping FunctionImportName="usp_NR_checkTableiPod" FunctionName="ChineseTillModel.Store.usp_NR_checkTableiPod">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_NR_checkTableiPod_Result">
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="ProductOptions" ColumnName="ProductOptions" />
+          <ScalarProperty Name="ProductOptionIds" ColumnName="ProductOptionIds" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_NR_GetLinkedProductsInUse" FunctionName="ChineseTillModel.Store.usp_NR_GetLinkedProductsInUse" />
+    <FunctionImportMapping FunctionImportName="usp_NR_GetOrderGUID" FunctionName="ChineseTillModel.Store.usp_NR_GetOrderGUID" />
+    <FunctionImportMapping FunctionImportName="usp_NR_GetProductName" FunctionName="ChineseTillModel.Store.usp_NR_GetProductName" />
+    <FunctionImportMapping FunctionImportName="usp_NR_GetUsername" FunctionName="ChineseTillModel.Store.usp_NR_GetUsername" />
+    <FunctionImportMapping FunctionImportName="usp_NR_InsertBillForRefilliPod" FunctionName="ChineseTillModel.Store.usp_NR_InsertBillForRefilliPod" />
+    <FunctionImportMapping FunctionImportName="usp_NR_InsertRefill" FunctionName="ChineseTillModel.Store.usp_NR_InsertRefill" />
+    <FunctionImportMapping FunctionImportName="usp_NR_InsertRequestBilliPod" FunctionName="ChineseTillModel.Store.usp_NR_InsertRequestBilliPod" />
+    <FunctionImportMapping FunctionImportName="usp_NR_LogFunction" FunctionName="ChineseTillModel.Store.usp_NR_LogFunction" />
+    <FunctionImportMapping FunctionImportName="usp_NR_SearchProducts" FunctionName="ChineseTillModel.Store.usp_NR_SearchProducts">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_NR_SearchProducts_Result">
+          <ScalarProperty Name="productID" ColumnName="productID" />
+          <ScalarProperty Name="ProductGroupID" ColumnName="ProductGroupID" />
+          <ScalarProperty Name="Groupname" ColumnName="Groupname" />
+          <ScalarProperty Name="ParentGroupID" ColumnName="ParentGroupID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Backcolour" ColumnName="Backcolour" />
+          <ScalarProperty Name="Forecolour" ColumnName="Forecolour" />
+          <ScalarProperty Name="ProductAvailable" ColumnName="ProductAvailable" />
+          <ScalarProperty Name="HasLinkedProducts" ColumnName="HasLinkedProducts" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_NS_AddNewProduct" FunctionName="ChineseTillModel.Store.usp_NS_AddNewProduct" />
+    <FunctionImportMapping FunctionImportName="usp_NS_AuthenticateUser" FunctionName="ChineseTillModel.Store.usp_NS_AuthenticateUser" />
+    <FunctionImportMapping FunctionImportName="usp_NS_AuthenticateUserV2" FunctionName="ChineseTillModel.Store.usp_NS_AuthenticateUserV2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_NS_AuthenticateUserV2_Result">
+          <ScalarProperty Name="UserLogin" ColumnName="UserLogin" />
+          <ScalarProperty Name="UserLevel" ColumnName="UserLevel" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_NS_checkTable" FunctionName="ChineseTillModel.Store.usp_NS_checkTable" />
+    <FunctionImportMapping FunctionImportName="usp_NS_closeTable" FunctionName="ChineseTillModel.Store.usp_NS_closeTable" />
+    <FunctionImportMapping FunctionImportName="usp_NS_closeTable2" FunctionName="ChineseTillModel.Store.usp_NS_closeTable2" />
+    <FunctionImportMapping FunctionImportName="usp_NS_closeTable4" FunctionName="ChineseTillModel.Store.usp_NS_closeTable4" />
+    <FunctionImportMapping FunctionImportName="usp_NS_closeTableAndMove" FunctionName="ChineseTillModel.Store.usp_NS_closeTableAndMove" />
+    <FunctionImportMapping FunctionImportName="usp_NS_closeTableV3" FunctionName="ChineseTillModel.Store.usp_NS_closeTableV3" />
+    <FunctionImportMapping FunctionImportName="usp_NS_FetchTables" FunctionName="ChineseTillModel.Store.usp_NS_FetchTables">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_NS_FetchTables_Result">
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="CurrentStatus" ColumnName="CurrentStatus" />
+          <ScalarProperty Name="Top" ColumnName="Top" />
+          <ScalarProperty Name="Left" ColumnName="Left" />
+          <ScalarProperty Name="OccupiedTime" ColumnName="OccupiedTime" />
+          <ScalarProperty Name="CurrentTotal" ColumnName="CurrentTotal" />
+          <ScalarProperty Name="TableNumber" ColumnName="TableNumber" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_NS_GetProductsAndCategories" FunctionName="ChineseTillModel.Store.usp_NS_GetProductsAndCategories">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_NS_GetProductsAndCategories_Result">
+          <ScalarProperty Name="ProductGroupID" ColumnName="ProductGroupID" />
+          <ScalarProperty Name="Groupname" ColumnName="Groupname" />
+          <ScalarProperty Name="ParentGroupID" ColumnName="ParentGroupID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_NS_GetProductsInOrderByTable" FunctionName="ChineseTillModel.Store.usp_NS_GetProductsInOrderByTable">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_NS_GetProductsInOrderByTable_Result">
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="bComitted" ColumnName="bComitted" />
+          <ScalarProperty Name="HasLinkedProducts" ColumnName="HasLinkedProducts" />
+          <ScalarProperty Name="ProductOptions" ColumnName="ProductOptions" />
+          <ScalarProperty Name="ProductOptionIds" ColumnName="ProductOptionIds" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_NS_MoveTable" FunctionName="ChineseTillModel.Store.usp_NS_MoveTable" />
+    <FunctionImportMapping FunctionImportName="usp_NS_OrderPartTempInsert" FunctionName="ChineseTillModel.Store.usp_NS_OrderPartTempInsert" />
+    <FunctionImportMapping FunctionImportName="usp_NS_PrintWirelessOrder" FunctionName="ChineseTillModel.Store.usp_NS_PrintWirelessOrder" />
+    <FunctionImportMapping FunctionImportName="usp_NS_PrintWirelessOrderv2" FunctionName="ChineseTillModel.Store.usp_NS_PrintWirelessOrderv2" />
+    <FunctionImportMapping FunctionImportName="usp_NS_PrintWirelessOrderv3" FunctionName="ChineseTillModel.Store.usp_NS_PrintWirelessOrderv3" />
+    <FunctionImportMapping FunctionImportName="usp_NS_UpdateExistingOrderQuantities" FunctionName="ChineseTillModel.Store.usp_NS_UpdateExistingOrderQuantities" />
+    <FunctionImportMapping FunctionImportName="usp_PK_AddOnlineReservationToTill" FunctionName="ChineseTillModel.Store.usp_PK_AddOnlineReservationToTill" />
+    <FunctionImportMapping FunctionImportName="usp_PK_AlteredItemsHistoryForZ" FunctionName="ChineseTillModel.Store.usp_PK_AlteredItemsHistoryForZ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_PK_AlteredItemsHistoryForZ_Result">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Removed" ColumnName="Removed" />
+          <ScalarProperty Name="Added" ColumnName="Added" />
+          <ScalarProperty Name="PCName" ColumnName="PCName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="OrderFK" ColumnName="OrderFK" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_PK_CheckIfProductIsAvailableAtThisTime" FunctionName="ChineseTillModel.Store.usp_PK_CheckIfProductIsAvailableAtThisTime" />
+    <FunctionImportMapping FunctionImportName="usp_PK_DeleteRefillTemplateItems" FunctionName="ChineseTillModel.Store.usp_PK_DeleteRefillTemplateItems" />
+    <FunctionImportMapping FunctionImportName="usp_PK_GetChangedUserSwipeHistory" FunctionName="ChineseTillModel.Store.usp_PK_GetChangedUserSwipeHistory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_PK_GetChangedUserSwipeHistory_Result">
+          <ScalarProperty Name="SwipeID" ColumnName="SwipeID" />
+          <ScalarProperty Name="UserFK" ColumnName="UserFK" />
+          <ScalarProperty Name="TillName" ColumnName="TillName" />
+          <ScalarProperty Name="ScanCode" ColumnName="ScanCode" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_PK_LoadRefillTemplateItems" FunctionName="ChineseTillModel.Store.usp_PK_LoadRefillTemplateItems">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_PK_LoadRefillTemplateItems_Result">
+          <ScalarProperty Name="ProductFK" ColumnName="ProductFK" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="SmallPortion" ColumnName="SmallPortion" />
+          <ScalarProperty Name="RegularPortion" ColumnName="RegularPortion" />
+          <ScalarProperty Name="LargePortion" ColumnName="LargePortion" />
+          <ScalarProperty Name="Options" ColumnName="Options" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_PK_NoSalesHistoryForZ" FunctionName="ChineseTillModel.Store.usp_PK_NoSalesHistoryForZ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_PK_NoSalesHistoryForZ_Result">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_PK_PaymentHistoryForZ" FunctionName="ChineseTillModel.Store.usp_PK_PaymentHistoryForZ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_PK_PaymentHistoryForZ_Result">
+          <ScalarProperty Name="MethodTotal" ColumnName="MethodTotal" />
+          <ScalarProperty Name="TipAmount" ColumnName="TipAmount" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_PK_PrintToKitchenPrinter" FunctionName="ChineseTillModel.Store.usp_PK_PrintToKitchenPrinter" />
+    <FunctionImportMapping FunctionImportName="usp_PK_ProductHistoryForZ" FunctionName="ChineseTillModel.Store.usp_PK_ProductHistoryForZ" />
+    <FunctionImportMapping FunctionImportName="usp_PK_SalesBreakdownForZ" FunctionName="ChineseTillModel.Store.usp_PK_SalesBreakdownForZ" />
+    <FunctionImportMapping FunctionImportName="usp_PK_SalesBreakdownForZUnknownTypes" FunctionName="ChineseTillModel.Store.usp_PK_SalesBreakdownForZUnknownTypes" />
+    <FunctionImportMapping FunctionImportName="usp_PK_SaveRefillTemplateItem" FunctionName="ChineseTillModel.Store.usp_PK_SaveRefillTemplateItem" />
+    <FunctionImportMapping FunctionImportName="usp_PK_SaveRefillTemplateItemV2" FunctionName="ChineseTillModel.Store.usp_PK_SaveRefillTemplateItemV2" />
+    <FunctionImportMapping FunctionImportName="usp_PK_SaveRefillTemplateName" FunctionName="ChineseTillModel.Store.usp_PK_SaveRefillTemplateName" />
+    <FunctionImportMapping FunctionImportName="usp_RD_InsertOrder" FunctionName="ChineseTillModel.Store.usp_RD_InsertOrder" />
+    <FunctionImportMapping FunctionImportName="usp_RD_InsertOrder_V1" FunctionName="ChineseTillModel.Store.usp_RD_InsertOrder_V1" />
+    <FunctionImportMapping FunctionImportName="usp_SS_AddingMenuitemFromProductList" FunctionName="ChineseTillModel.Store.usp_SS_AddingMenuitemFromProductList" />
+    <FunctionImportMapping FunctionImportName="usp_SS_AddMenuitems" FunctionName="ChineseTillModel.Store.usp_SS_AddMenuitems" />
+    <FunctionImportMapping FunctionImportName="usp_SS_AddNewRefund" FunctionName="ChineseTillModel.Store.usp_SS_AddNewRefund" />
+    <FunctionImportMapping FunctionImportName="usp_SS_AddOnlineReservationToTill" FunctionName="ChineseTillModel.Store.usp_SS_AddOnlineReservationToTill" />
+    <FunctionImportMapping FunctionImportName="usp_SS_AddPromotion" FunctionName="ChineseTillModel.Store.usp_SS_AddPromotion" />
+    <FunctionImportMapping FunctionImportName="usp_SS_AddSalesRecord" FunctionName="ChineseTillModel.Store.usp_SS_AddSalesRecord" />
+    <FunctionImportMapping FunctionImportName="usp_SS_AddSalesRecordV1" FunctionName="ChineseTillModel.Store.usp_SS_AddSalesRecordV1" />
+    <FunctionImportMapping FunctionImportName="usp_SS_AllocateOnlineReservation" FunctionName="ChineseTillModel.Store.usp_SS_AllocateOnlineReservation" />
+    <FunctionImportMapping FunctionImportName="usp_SS_AllocateReservation" FunctionName="ChineseTillModel.Store.usp_SS_AllocateReservation" />
+    <FunctionImportMapping FunctionImportName="usp_SS_CollectTakeAwayOrder" FunctionName="ChineseTillModel.Store.usp_SS_CollectTakeAwayOrder" />
+    <FunctionImportMapping FunctionImportName="usp_SS_CreateOrderPart" FunctionName="ChineseTillModel.Store.usp_SS_CreateOrderPart" />
+    <FunctionImportMapping FunctionImportName="usp_SS_CreateOrderPartOption" FunctionName="ChineseTillModel.Store.usp_SS_CreateOrderPartOption" />
+    <FunctionImportMapping FunctionImportName="usp_SS_CreateTakeAwayOrder" FunctionName="ChineseTillModel.Store.usp_SS_CreateTakeAwayOrder" />
+    <FunctionImportMapping FunctionImportName="usp_SS_CreateVoucherCode" FunctionName="ChineseTillModel.Store.usp_SS_CreateVoucherCode" />
+    <FunctionImportMapping FunctionImportName="usp_SS_DeleteMenuitems" FunctionName="ChineseTillModel.Store.usp_SS_DeleteMenuitems" />
+    <FunctionImportMapping FunctionImportName="usp_SS_DeleteProduct" FunctionName="ChineseTillModel.Store.usp_SS_DeleteProduct" />
+    <FunctionImportMapping FunctionImportName="usp_SS_DeletePromotion" FunctionName="ChineseTillModel.Store.usp_SS_DeletePromotion" />
+    <FunctionImportMapping FunctionImportName="usp_SS_DeleteStockTemplateProducts" FunctionName="ChineseTillModel.Store.usp_SS_DeleteStockTemplateProducts" />
+    <FunctionImportMapping FunctionImportName="usp_SS_GetDeletedItemsData" FunctionName="ChineseTillModel.Store.usp_SS_GetDeletedItemsData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_GetDeletedItemsData_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="BillPrinted" ColumnName="BillPrinted" />
+          <ScalarProperty Name="DeletionDate" ColumnName="DeletionDate" />
+          <ScalarProperty Name="TableDel" ColumnName="TableDel" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="RestaurantID" ColumnName="RestaurantID" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="TableNumber" ColumnName="TableNumber" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_GetDishOrders" FunctionName="ChineseTillModel.Store.usp_SS_GetDishOrders">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_GetDishOrders_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="DateOrdered" ColumnName="DateOrdered" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="DateServed" ColumnName="DateServed" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="RestaurantFK" ColumnName="RestaurantFK" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_GetDrinksSoldData" FunctionName="ChineseTillModel.Store.usp_SS_GetDrinksSoldData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_GetDrinksSoldData_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="DateSold" ColumnName="DateSold" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="SecondRoundDrink" ColumnName="SecondRoundDrink" />
+          <ScalarProperty Name="AdditionalDrink" ColumnName="AdditionalDrink" />
+          <ScalarProperty Name="RestaurantID" ColumnName="RestaurantID" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ProductGroupID" ColumnName="ProductGroupID" />
+          <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_GetDrinksTargetData" FunctionName="ChineseTillModel.Store.usp_SS_GetDrinksTargetData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_GetDrinksTargetData_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="TargetSet" ColumnName="TargetSet" />
+          <ScalarProperty Name="RestaurantID" ColumnName="RestaurantID" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_GetItemsServeData" FunctionName="ChineseTillModel.Store.usp_SS_GetItemsServeData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_GetItemsServeData_Result">
+          <ScalarProperty Name="OrderPartID" ColumnName="OrderPartID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="OrderedDate" ColumnName="OrderedDate" />
+          <ScalarProperty Name="ServedDate" ColumnName="ServedDate" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="TableNumber" ColumnName="TableNumber" />
+          <ScalarProperty Name="RestaurantID" ColumnName="RestaurantID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_GetLinkedProducts" FunctionName="ChineseTillModel.Store.usp_SS_GetLinkedProducts" />
+    <FunctionImportMapping FunctionImportName="usp_SS_GetLoginData" FunctionName="ChineseTillModel.Store.usp_SS_GetLoginData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_GetLoginData_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="LoginTime" ColumnName="LoginTime" />
+          <ScalarProperty Name="LogoutTime" ColumnName="LogoutTime" />
+          <ScalarProperty Name="DeviceType" ColumnName="DeviceType" />
+          <ScalarProperty Name="RestaurantID" ColumnName="RestaurantID" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_GetOrderedItemsTime" FunctionName="ChineseTillModel.Store.usp_SS_GetOrderedItemsTime">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_GetOrderedItemsTime_Result">
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateServed" ColumnName="DateServed" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="DrinksRep" ColumnName="DrinksRep" />
+          <ScalarProperty Name="CoffeeConfirm" ColumnName="CoffeeConfirm" />
+          <ScalarProperty Name="BillPrinted" ColumnName="BillPrinted" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_GetOrderPartsData" FunctionName="ChineseTillModel.Store.usp_SS_GetOrderPartsData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_GetOrderPartsData_Result">
+          <ScalarProperty Name="OrderPartID" ColumnName="OrderPartID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="OldOrderPartID" ColumnName="OldOrderPartID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateServed" ColumnName="DateServed" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="WebUpload" ColumnName="WebUpload" />
+          <ScalarProperty Name="VAT" ColumnName="VAT" />
+          <ScalarProperty Name="RestaurantID" ColumnName="RestaurantID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_GetOrderPaymentsData" FunctionName="ChineseTillModel.Store.usp_SS_GetOrderPaymentsData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_GetOrderPaymentsData_Result">
+          <ScalarProperty Name="PaymentGUID" ColumnName="PaymentGUID" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+          <ScalarProperty Name="PaymentValue" ColumnName="PaymentValue" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="PCName" ColumnName="PCName" />
+          <ScalarProperty Name="Change" ColumnName="Change" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="TipAmount" ColumnName="TipAmount" />
+          <ScalarProperty Name="DeliveryCharges" ColumnName="DeliveryCharges" />
+          <ScalarProperty Name="ServiceCharge" ColumnName="ServiceCharge" />
+          <ScalarProperty Name="RestaurantID" ColumnName="RestaurantID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_GetOrdersData" FunctionName="ChineseTillModel.Store.usp_SS_GetOrdersData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_GetOrdersData_Result">
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="Paid" ColumnName="Paid" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+          <ScalarProperty Name="GrandTotal" ColumnName="GrandTotal" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="TabID" ColumnName="TabID" />
+          <ScalarProperty Name="TabName" ColumnName="TabName" />
+          <ScalarProperty Name="DatePaid" ColumnName="DatePaid" />
+          <ScalarProperty Name="TotalPaid" ColumnName="TotalPaid" />
+          <ScalarProperty Name="Change" ColumnName="Change" />
+          <ScalarProperty Name="BillPrinted" ColumnName="BillPrinted" />
+          <ScalarProperty Name="VATReceiptPrinted" ColumnName="VATReceiptPrinted" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="TakeAway" ColumnName="TakeAway" />
+          <ScalarProperty Name="TakeAwayName" ColumnName="TakeAwayName" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="WebUploadSuccessful" ColumnName="WebUploadSuccessful" />
+          <ScalarProperty Name="CustCount" ColumnName="CustCount" />
+          <ScalarProperty Name="PrevCust" ColumnName="PrevCust" />
+          <ScalarProperty Name="DrinksRep" ColumnName="DrinksRep" />
+          <ScalarProperty Name="CoffeeConfirm" ColumnName="CoffeeConfirm" />
+          <ScalarProperty Name="AdCount" ColumnName="AdCount" />
+          <ScalarProperty Name="KdCount" ColumnName="KdCount" />
+          <ScalarProperty Name="JnCount" ColumnName="JnCount" />
+          <ScalarProperty Name="SplitBill" ColumnName="SplitBill" />
+          <ScalarProperty Name="MovedFromOrderGUID" ColumnName="MovedFromOrderGUID" />
+          <ScalarProperty Name="TipAmount" ColumnName="TipAmount" />
+          <ScalarProperty Name="ServiceRequired" ColumnName="ServiceRequired" />
+          <ScalarProperty Name="DeliveryCharges" ColumnName="DeliveryCharges" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="ServiceChargeApplicable" ColumnName="ServiceChargeApplicable" />
+          <ScalarProperty Name="ServiceCharge" ColumnName="ServiceCharge" />
+          <ScalarProperty Name="RestaurantID" ColumnName="RestaurantID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_GetOrderServeTimeData" FunctionName="ChineseTillModel.Store.usp_SS_GetOrderServeTimeData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_GetOrderServeTimeData_Result">
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="OrderedDate" ColumnName="OrderedDate" />
+          <ScalarProperty Name="ServedDate" ColumnName="ServedDate" />
+          <ScalarProperty Name="RestaurantID" ColumnName="RestaurantID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_GetReceivedStockItemsTILL" FunctionName="ChineseTillModel.Store.usp_SS_GetReceivedStockItemsTILL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_GetReceivedStockItemsTILL_Result">
+          <ScalarProperty Name="SupplierOrderItemId" ColumnName="SupplierOrderItemId" />
+          <ScalarProperty Name="PurchaseOrderNumberFK" ColumnName="PurchaseOrderNumberFK" />
+          <ScalarProperty Name="ProductFK" ColumnName="ProductFK" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Received" ColumnName="Received" />
+          <ScalarProperty Name="Cancelled" ColumnName="Cancelled" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="PoorQuality" ColumnName="PoorQuality" />
+          <ScalarProperty Name="QuantityUnder" ColumnName="QuantityUnder" />
+          <ScalarProperty Name="QuantityOver" ColumnName="QuantityOver" />
+          <ScalarProperty Name="TemperatureIssue" ColumnName="TemperatureIssue" />
+          <ScalarProperty Name="ExpirationIssue" ColumnName="ExpirationIssue" />
+          <ScalarProperty Name="Return" ColumnName="Return" />
+          <ScalarProperty Name="Checked" ColumnName="Checked" />
+          <ScalarProperty Name="SupplierAmount" ColumnName="SupplierAmount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_GetReceivedStockTILL" FunctionName="ChineseTillModel.Store.usp_SS_GetReceivedStockTILL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_GetReceivedStockTILL_Result">
+          <ScalarProperty Name="SupplierOrderId" ColumnName="SupplierOrderId" />
+          <ScalarProperty Name="PurchaseOrderNumber" ColumnName="PurchaseOrderNumber" />
+          <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="Completed" ColumnName="Completed" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Authorizer" ColumnName="Authorizer" />
+          <ScalarProperty Name="Frozen" ColumnName="Frozen" />
+          <ScalarProperty Name="Chill" ColumnName="Chill" />
+          <ScalarProperty Name="Condition" ColumnName="Condition" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="SupplierSign" ColumnName="SupplierSign" />
+          <ScalarProperty Name="AuthorizerSign" ColumnName="AuthorizerSign" />
+          <ScalarProperty Name="CompletedDate" ColumnName="CompletedDate" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="UrgentReport" ColumnName="UrgentReport" />
+          <ScalarProperty Name="WebUpload" ColumnName="WebUpload" />
+          <ScalarProperty Name="Saved" ColumnName="Saved" />
+          <ScalarProperty Name="StaffUserCode" ColumnName="StaffUserCode" />
+          <ScalarProperty Name="ManagerUserCode" ColumnName="ManagerUserCode" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_GetRedeemedProducts" FunctionName="ChineseTillModel.Store.usp_SS_GetRedeemedProducts">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_GetRedeemedProducts_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="DateOrdered" ColumnName="DateOrdered" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Points" ColumnName="Points" />
+          <ScalarProperty Name="RestaurantFK" ColumnName="RestaurantFK" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_GetRefillItemsData" FunctionName="ChineseTillModel.Store.usp_SS_GetRefillItemsData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_GetRefillItemsData_Result">
+          <ScalarProperty Name="ProductRefillID" ColumnName="ProductRefillID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="OrderedDate" ColumnName="OrderedDate" />
+          <ScalarProperty Name="ServedDate" ColumnName="ServedDate" />
+          <ScalarProperty Name="RestaurantID" ColumnName="RestaurantID" />
+          <ScalarProperty Name="Refill" ColumnName="Refill" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_GetRefundData" FunctionName="ChineseTillModel.Store.usp_SS_GetRefundData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_GetRefundData_Result">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="RefundDate" ColumnName="RefundDate" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="Mode" ColumnName="Mode" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="RestaurantID" ColumnName="RestaurantID" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_GetRestaurantDetails" FunctionName="ChineseTillModel.Store.usp_SS_GetRestaurantDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_GetRestaurantDetails_Result">
+          <ScalarProperty Name="RestaurantID" ColumnName="RestaurantID" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_GetTargetsData" FunctionName="ChineseTillModel.Store.usp_SS_GetTargetsData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_GetTargetsData_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="ProductTarget" ColumnName="ProductTarget" />
+          <ScalarProperty Name="RestaurantID" ColumnName="RestaurantID" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_GetToiletCheckData" FunctionName="ChineseTillModel.Store.usp_SS_GetToiletCheckData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_GetToiletCheckData_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ToiletName" ColumnName="ToiletName" />
+          <ScalarProperty Name="CleaningDate" ColumnName="CleaningDate" />
+          <ScalarProperty Name="RestaurantID" ColumnName="RestaurantID" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_GetUnclaimedProductsData" FunctionName="ChineseTillModel.Store.usp_SS_GetUnclaimedProductsData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_GetUnclaimedProductsData_Result">
+          <ScalarProperty Name="UnclaimedProductId" ColumnName="UnclaimedProductId" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="DeletionDate" ColumnName="DeletionDate" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="RestaurantID" ColumnName="RestaurantID" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="TableNumber" ColumnName="TableNumber" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_GetVoucherDetails" FunctionName="ChineseTillModel.Store.usp_SS_GetVoucherDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_GetVoucherDetails_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RestaurantID" ColumnName="RestaurantID" />
+          <ScalarProperty Name="DateRedeemed" ColumnName="DateRedeemed" />
+          <ScalarProperty Name="TableNumber" ColumnName="TableNumber" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="WebUpload" ColumnName="WebUpload" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_InsertBoxGroup" FunctionName="ChineseTillModel.Store.usp_SS_InsertBoxGroup" />
+    <FunctionImportMapping FunctionImportName="usp_SS_InsertBoxGroupProduct" FunctionName="ChineseTillModel.Store.usp_SS_InsertBoxGroupProduct" />
+    <FunctionImportMapping FunctionImportName="usp_SS_InsertDrinksSold" FunctionName="ChineseTillModel.Store.usp_SS_InsertDrinksSold" />
+    <FunctionImportMapping FunctionImportName="usp_SS_InsertNewMenu" FunctionName="ChineseTillModel.Store.usp_SS_InsertNewMenu" />
+    <FunctionImportMapping FunctionImportName="usp_SS_InsertNewProduct" FunctionName="ChineseTillModel.Store.usp_SS_InsertNewProduct" />
+    <FunctionImportMapping FunctionImportName="usp_SS_InsertNewProductType" FunctionName="ChineseTillModel.Store.usp_SS_InsertNewProductType" />
+    <FunctionImportMapping FunctionImportName="usp_SS_InsertNewStockOrder" FunctionName="ChineseTillModel.Store.usp_SS_InsertNewStockOrder" />
+    <FunctionImportMapping FunctionImportName="usp_SS_InsertTillOrderPart" FunctionName="ChineseTillModel.Store.usp_SS_InsertTillOrderPart" />
+    <FunctionImportMapping FunctionImportName="usp_SS_InsertTillOrderPart_V1" FunctionName="ChineseTillModel.Store.usp_SS_InsertTillOrderPart_V1" />
+    <FunctionImportMapping FunctionImportName="usp_SS_LoadRefillTemplateItems" FunctionName="ChineseTillModel.Store.usp_SS_LoadRefillTemplateItems">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_LoadRefillTemplateItems_Result">
+          <ScalarProperty Name="ProductFK" ColumnName="ProductFK" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ChineseName" ColumnName="ChineseName" />
+          <ScalarProperty Name="SmallPortion" ColumnName="SmallPortion" />
+          <ScalarProperty Name="RegularPortion" ColumnName="RegularPortion" />
+          <ScalarProperty Name="LargePortion" ColumnName="LargePortion" />
+          <ScalarProperty Name="Options" ColumnName="Options" />
+          <ScalarProperty Name="ProductQty" ColumnName="ProductQty" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_LoadRefillTemplateItemsV3" FunctionName="ChineseTillModel.Store.usp_SS_LoadRefillTemplateItemsV3">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_LoadRefillTemplateItemsV3_Result">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ChineseName" ColumnName="ChineseName" />
+          <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="bVegetarain" ColumnName="bVegetarain" />
+          <ScalarProperty Name="bSpicy" ColumnName="bSpicy" />
+          <ScalarProperty Name="bGlutenFree" ColumnName="bGlutenFree" />
+          <ScalarProperty Name="vAllergens" ColumnName="vAllergens" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_PaymentHistoryForZ" FunctionName="ChineseTillModel.Store.usp_SS_PaymentHistoryForZ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_PaymentHistoryForZ_Result">
+          <ScalarProperty Name="MethodTotal" ColumnName="MethodTotal" />
+          <ScalarProperty Name="TipAmount" ColumnName="TipAmount" />
+          <ScalarProperty Name="ServiceCharge" ColumnName="ServiceCharge" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_PaymentHistoryForZ_V1" FunctionName="ChineseTillModel.Store.usp_SS_PaymentHistoryForZ_V1">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_PaymentHistoryForZ_V1_Result">
+          <ScalarProperty Name="MethodTotal" ColumnName="MethodTotal" />
+          <ScalarProperty Name="TipAmount" ColumnName="TipAmount" />
+          <ScalarProperty Name="ServiceCharge" ColumnName="ServiceCharge" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_PrintTakeAwayOrder" FunctionName="ChineseTillModel.Store.usp_SS_PrintTakeAwayOrder" />
+    <FunctionImportMapping FunctionImportName="usp_SS_SaveDeliveryPostCode" FunctionName="ChineseTillModel.Store.usp_SS_SaveDeliveryPostCode" />
+    <FunctionImportMapping FunctionImportName="usp_SS_SavePromotion" FunctionName="ChineseTillModel.Store.usp_SS_SavePromotion" />
+    <FunctionImportMapping FunctionImportName="usp_SS_ShowDeliveryOrdersCount" FunctionName="ChineseTillModel.Store.usp_SS_ShowDeliveryOrdersCount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_ShowDeliveryOrdersCount_Result">
+          <ScalarProperty Name="DeliveryStaffId" ColumnName="DeliveryStaffId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Collected" ColumnName="Collected" />
+          <ScalarProperty Name="Delivered" ColumnName="Delivered" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_ShowTakeAwayOrders" FunctionName="ChineseTillModel.Store.usp_SS_ShowTakeAwayOrders">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_ShowTakeAwayOrders_Result">
+          <ScalarProperty Name="TakeAwayId" ColumnName="TakeAwayId" />
+          <ScalarProperty Name="CollectionTime" ColumnName="CollectionTime" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="theAddress" ColumnName="theAddress" />
+          <ScalarProperty Name="HasPrinted" ColumnName="HasPrinted" />
+          <ScalarProperty Name="HasBeenCollected" ColumnName="HasBeenCollected" />
+          <ScalarProperty Name="AddressId" ColumnName="AddressId" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="HasBeenPrepared" ColumnName="HasBeenPrepared" />
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+          <ScalarProperty Name="DeliveryType" ColumnName="DeliveryType" />
+          <ScalarProperty Name="Paid" ColumnName="Paid" />
+          <ScalarProperty Name="HasBeenDelivered" ColumnName="HasBeenDelivered" />
+          <ScalarProperty Name="AssignedTo" ColumnName="AssignedTo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_TakeAwayOrders" FunctionName="ChineseTillModel.Store.usp_SS_TakeAwayOrders" />
+    <FunctionImportMapping FunctionImportName="usp_SS_UpdateAddress" FunctionName="ChineseTillModel.Store.usp_SS_UpdateAddress" />
+    <FunctionImportMapping FunctionImportName="usp_SS_UpdateCurrentStatus" FunctionName="ChineseTillModel.Store.usp_SS_UpdateCurrentStatus" />
+    <FunctionImportMapping FunctionImportName="usp_SS_UpdateDelItemsSend" FunctionName="ChineseTillModel.Store.usp_SS_UpdateDelItemsSend" />
+    <FunctionImportMapping FunctionImportName="usp_SS_UpdateDeliveryConfirmation" FunctionName="ChineseTillModel.Store.usp_SS_UpdateDeliveryConfirmation" />
+    <FunctionImportMapping FunctionImportName="usp_SS_UpdateDeliveryStaff" FunctionName="ChineseTillModel.Store.usp_SS_UpdateDeliveryStaff" />
+    <FunctionImportMapping FunctionImportName="usp_SS_UpdateDishOrderSend" FunctionName="ChineseTillModel.Store.usp_SS_UpdateDishOrderSend" />
+    <FunctionImportMapping FunctionImportName="usp_SS_UpdateDrinkSoldSend" FunctionName="ChineseTillModel.Store.usp_SS_UpdateDrinkSoldSend" />
+    <FunctionImportMapping FunctionImportName="usp_SS_UpdateDrinkTargetSend" FunctionName="ChineseTillModel.Store.usp_SS_UpdateDrinkTargetSend" />
+    <FunctionImportMapping FunctionImportName="usp_SS_UpdateItemServeSend" FunctionName="ChineseTillModel.Store.usp_SS_UpdateItemServeSend" />
+    <FunctionImportMapping FunctionImportName="usp_SS_UpdateLoginSend" FunctionName="ChineseTillModel.Store.usp_SS_UpdateLoginSend" />
+    <FunctionImportMapping FunctionImportName="usp_SS_UpdateMenu" FunctionName="ChineseTillModel.Store.usp_SS_UpdateMenu" />
+    <FunctionImportMapping FunctionImportName="usp_SS_UpdateOnlineReservationToTill" FunctionName="ChineseTillModel.Store.usp_SS_UpdateOnlineReservationToTill" />
+    <FunctionImportMapping FunctionImportName="usp_SS_UpdateOrderServeTimeSend" FunctionName="ChineseTillModel.Store.usp_SS_UpdateOrderServeTimeSend" />
+    <FunctionImportMapping FunctionImportName="usp_SS_UpdateOrderUploadSuccessful" FunctionName="ChineseTillModel.Store.usp_SS_UpdateOrderUploadSuccessful" />
+    <FunctionImportMapping FunctionImportName="usp_SS_UpdateProductGroupNames" FunctionName="ChineseTillModel.Store.usp_SS_UpdateProductGroupNames" />
+    <FunctionImportMapping FunctionImportName="usp_SS_UpdateProductGroupOfProduct" FunctionName="ChineseTillModel.Store.usp_SS_UpdateProductGroupOfProduct" />
+    <FunctionImportMapping FunctionImportName="usp_SS_UpdateProductGroupValues" FunctionName="ChineseTillModel.Store.usp_SS_UpdateProductGroupValues" />
+    <FunctionImportMapping FunctionImportName="usp_SS_UpdateRefillItemSend" FunctionName="ChineseTillModel.Store.usp_SS_UpdateRefillItemSend" />
+    <FunctionImportMapping FunctionImportName="usp_SS_UpdateRefundSend" FunctionName="ChineseTillModel.Store.usp_SS_UpdateRefundSend" />
+    <FunctionImportMapping FunctionImportName="usp_SS_UpdateStockTemplates" FunctionName="ChineseTillModel.Store.usp_SS_UpdateStockTemplates" />
+    <FunctionImportMapping FunctionImportName="usp_SS_UpdateTableStatus" FunctionName="ChineseTillModel.Store.usp_SS_UpdateTableStatus" />
+    <FunctionImportMapping FunctionImportName="usp_SS_UpdateTargetsSend" FunctionName="ChineseTillModel.Store.usp_SS_UpdateTargetsSend" />
+    <FunctionImportMapping FunctionImportName="usp_SS_UpdateToiletCheckSend" FunctionName="ChineseTillModel.Store.usp_SS_UpdateToiletCheckSend" />
+    <FunctionImportMapping FunctionImportName="usp_SS_UpdateUnclaimedProductsSend" FunctionName="ChineseTillModel.Store.usp_SS_UpdateUnclaimedProductsSend" />
+    <FunctionImportMapping FunctionImportName="usp_SS_VATPaymentSummary" FunctionName="ChineseTillModel.Store.usp_SS_VATPaymentSummary">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_VATPaymentSummary_Result">
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="MethodTotal" ColumnName="MethodTotal" />
+          <ScalarProperty Name="TipAmount" ColumnName="TipAmount" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_VATPaymentSummary_V1" FunctionName="ChineseTillModel.Store.usp_SS_VATPaymentSummary_V1">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChineseTillModel.usp_SS_VATPaymentSummary_V1_Result">
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="MethodTotal" ColumnName="MethodTotal" />
+          <ScalarProperty Name="TipAmount" ColumnName="TipAmount" />
+          <ScalarProperty Name="ServiceCharge" ColumnName="ServiceCharge" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SS_AddOnlineReservationToTill_V2" FunctionName="ChineseTillModel.Store.usp_SS_AddOnlineReservationToTill_V2" />
+    <EntitySetMapping Name="tblCustomerFeedbacks">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblCustomerFeedback">
+        <MappingFragment StoreEntitySet="tblCustomerFeedback">
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="Feedback" ColumnName="Feedback" />
+          <ScalarProperty Name="Recommendation" ColumnName="Recommendation" />
+          <ScalarProperty Name="OverallRating" ColumnName="OverallRating" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="FeedbackId" ColumnName="FeedbackId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_AN_InsertOrder_V2" FunctionName="ChineseTillModel.Store.usp_AN_InsertOrder_V2" />
+    <EntitySetMapping Name="tblPrintBuffetItems">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblPrintBuffetItem">
+        <MappingFragment StoreEntitySet="tblPrintBuffetItems">
+          <ScalarProperty Name="Delivered" ColumnName="Delivered" />
+          <ScalarProperty Name="ReOrder" ColumnName="ReOrder" />
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+          <ScalarProperty Name="BatchTime" ColumnName="BatchTime" />
+          <ScalarProperty Name="BatchNo" ColumnName="BatchNo" />
+          <ScalarProperty Name="DatePrinted" ColumnName="DatePrinted" />
+          <ScalarProperty Name="CancelledBy" ColumnName="CancelledBy" />
+          <ScalarProperty Name="DateCancelled" ColumnName="DateCancelled" />
+          <ScalarProperty Name="Cancelled" ColumnName="Cancelled" />
+          <ScalarProperty Name="WebUpload" ColumnName="WebUpload" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="DateServed" ColumnName="DateServed" />
+          <ScalarProperty Name="Printed" ColumnName="Printed" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateOrdered" ColumnName="DateOrdered" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="OrderGUID" ColumnName="OrderGUID" />
+          <ScalarProperty Name="TableId" ColumnName="TableId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DirectPrint" ColumnName="DirectPrint" />
+          <ScalarProperty Name="MenuId" ColumnName="MenuId" />
+          <ScalarProperty Name="InProcess" ColumnName="InProcess" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSagePayments">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblSagePayment">
+        <MappingFragment StoreEntitySet="tblSagePayment">
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="DeviceType" ColumnName="DeviceType" />
+          <ScalarProperty Name="VendorTXCode" ColumnName="VendorTXCode" />
+          <ScalarProperty Name="SecurityKey" ColumnName="SecurityKey" />
+          <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+          <ScalarProperty Name="FaultReason" ColumnName="FaultReason" />
+          <ScalarProperty Name="IsSuccess" ColumnName="IsSuccess" />
+          <ScalarProperty Name="PaymentPrice" ColumnName="PaymentPrice" />
+          <ScalarProperty Name="StatusUpdated" ColumnName="StatusUpdated" />
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
+          <ScalarProperty Name="SplitPayment" ColumnName="SplitPayment" />
+          <ScalarProperty Name="TipAmount" ColumnName="TipAmount" />
+          <ScalarProperty Name="SCAmount" ColumnName="SCAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSCAmountUpdates">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblSCAmountUpdate">
+        <MappingFragment StoreEntitySet="tblSCAmountUpdates">
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="NewAmount" ColumnName="NewAmount" />
+          <ScalarProperty Name="OldAmount" ColumnName="OldAmount" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblFullDayMenus">
+      <EntityTypeMapping TypeName="ChineseTillModel.tblFullDayMenu">
+        <MappingFragment StoreEntitySet="tblFullDayMenu">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="DelInd" ColumnName="DelInd" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+          <ScalarProperty Name="RestaurantName" ColumnName="RestaurantName" />
+          <ScalarProperty Name="RestaurantId" ColumnName="RestaurantId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

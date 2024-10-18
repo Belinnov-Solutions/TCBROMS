@@ -1,0 +1,162 @@
+﻿@model  Entity.Models.BuffetItemsSummary
+@{
+    ViewBag.Title = "Home Page";
+    var a = 0;
+}
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js" defer></script>
+<script>
+    $(document).ready(function () {
+        $('#example').DataTable({
+            "bFilter": false,
+            "paging": false,
+            "ordering": false,
+            "info": false
+        });
+        $('#example1').DataTable({
+            "bFilter": false,
+            "paging": false,
+            "ordering": false,
+            "info": false
+        });
+        $('#example2').DataTable({
+            "bFilter": false,
+            "paging": false,
+            "ordering": false,
+            "info": false
+        });
+        $('#example3').DataTable({
+            "bFilter": false,
+            "paging": false,
+            "ordering": false,
+            "info": false
+        });
+    });
+</script>
+<style>
+    #verticalline {
+        border-left: 3px solid #bfa161;
+        /*width: 60px;*/
+    }
+    /*table,td {
+      border: 1px solid white;
+    }*/
+    #somelabel {
+        /*padding-left: 3px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 18ch;
+        margin-top: 20px;*/
+    }
+
+    table.table th, table.table td {
+        padding-top: 1rem;
+        padding-bottom: 0rem;
+    }
+
+    .table td, .table th {
+        padding: 0rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+</style>
+<div class="row">
+    <div class="col-4">
+        Starters: @Model.HeadCount.Starters
+    </div>
+    <div class="col-4">
+        MainCourse: @Model.HeadCount.MainCourse
+    </div>
+    <div class="col-4">
+        Deserts: @Model.HeadCount.Deserts
+    </div>
+</div>
+<div class="row" style="margin-top:10px">
+    <div class="col-lg-9">
+        <div class="card" style="background-color:black">
+            @*<p style="text-align:center;color:white;font-weight:800;font-size:24px">Placed Orders</p>*@
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                    <table class="table">
+                        <thead style="margin-top:12px">
+                            <tr style="color:white">
+                                <th>Product</th>
+                                <th>Qty</th>&nbsp;
+                                <th style="margin-left:1px" id="verticalline"></th>
+                                <th>Product</th>
+                                <th>Qty</th>&nbsp;
+                                <th style="margin-left:1px" id="verticalline"></th>
+                                <th>Product</th>
+                                <th>Qty</th>&nbsp;
+                            </tr>
+
+                            <tr style="color:white">
+                                @for (int i = 0; i < Model.PlacedOrders.Count; i++)
+                                {
+                                    a = a + 1;
+
+                                    if (Model.PlacedOrders[i].Priority == true)
+                                    {
+                                        <td id="somelabel" style="color:yellow">@Model.PlacedOrders[i].Description</td>
+                                        <td style="color:yellow;">@Model.PlacedOrders[i].ProductQty</td>
+                                    }
+                                    else
+                                    {
+                                        <td id="somelabel" style="color:@Model.PlacedOrders[i].color">@Model.PlacedOrders[i].Description</td>
+                                        <td style="color:@Model.PlacedOrders[i].color;">@Model.PlacedOrders[i].ProductQty</td>
+
+                                    }
+                                    @*<td style="color:yellow;">@Model.PlacedOrders[i].ProductQty</td>*@
+                                    <td id="verticalline">
+                                        </td">
+                                        @*<td class="col-lg-3">@Model.PlacedOrders[i].Description</td>
+                    <td class="col-lg-1">@Model.PlacedOrders[i].ProductQty</td>
+
+                    <td class="col-lg-3">@Model.PlacedOrders[i].Description</td>
+                    <td class="col-lg-1">@Model.PlacedOrders[i].ProductQty</td>*@
+                                        if (a % 3 == 0)
+                                        {
+                                            @:
+                                    <tr>
+
+                                    </tr>
+                                }
+                            }
+                                </tr>
+
+
+
+
+                            </thead>
+
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-lg-3">
+    <div class="card" style="background-color:black">
+        @*<p style="text-align:center;color:white;font-weight:800;font-size:24px">Complete Orders</p>*@
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <table class="table">
+                <thead>
+                    <tr style="color:white;font-size:20px">
+                        <th>Product</th>
+                        <th>Qty</th>&nbsp;
+                    </tr>
+                    @foreach (var item in Model.PrintedOrders)
+                    {
+                        <tr style="color:white; font-size:20px">
+                            <td>@item.Description</td>
+                            <td>@item.ProductQty</td>
+                        </tr>
+                    }
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
